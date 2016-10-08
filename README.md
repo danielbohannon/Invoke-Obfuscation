@@ -69,4 +69,5 @@ Invoke-Obfuscation is released under the Apache 2.0 license.
 Release Notes
 -------------
 v1.0 - 2016-09-25 DerbyCon 6.0, Louisville: PUBLIC Release of Invoke-Obfuscation
+
 v1.1 - 2016-10-09 SANS DFIR Summit, Prague: Added -f format operator re-ordering functionality to all applicable Token obfuscation functions. Also added additional syntax options for setting variable values.
