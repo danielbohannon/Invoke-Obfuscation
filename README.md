@@ -1,4 +1,4 @@
-Invoke-Obfuscation
+Invoke-Obfuscation v1.1
 ===============
 
 Introduction
@@ -10,7 +10,7 @@ Background
 ----------
 In the Fall of 2015 I decided to begin researching the flexibility of
 PowerShell's language and began cataloguing the various ways to
-accomplish a handful of common techniques that many attackers use on a
+accomplish a handful of common techniques that most attackers use on a
 regular basis.
 
 Initially focusing on encoded command and remote download cradle syntaxes,
@@ -23,8 +23,8 @@ obfuscating each kind of "token" found in any PowerShell command or script.
 I then explored more obscure ways to perform string-level obfuscation,
 various encoding/encrypting techniques (like ASCII/hex/octal/binary and even
 SecureString), and finally PowerShell launch techniques to abstract the
-command line arguments from powershell.exe by pushing it back to the command
-line arguments of the parent or even grandparent process.
+command line arguments from powershell.exe and to push it back to the parent
+and even grandparent process.
 
 Purpose
 -------
@@ -54,7 +54,7 @@ Installation
 ------------
 The source code for Invoke-Obfuscation is hosted at Github, and you may
 download, fork and review it from this repository
-(https://github.com/danielbohannon/Invoke-Obfuscation/). Please report issues
+(https://github.com/danielbohannon/Invoke-Obfuscation). Please report issues
 or feature requests through Github's bug tracker associated with this project.
 
 To install:
@@ -65,3 +65,8 @@ To install:
 License
 -------
 Invoke-Obfuscation is released under the Apache 2.0 license.
+
+Release Notes
+-------------
+v1.0 - 2016-09-25 DerbyCon 6.0, Louisville: PUBLIC Release of Invoke-Obfuscation
+v1.1 - 2016-10-09 SANS DFIR Summit, Prague: Added -f format operator re-ordering functionality to all applicable Token obfuscation functions. Also added additional syntax options for setting variable values.

@@ -79,58 +79,56 @@ http://www.danielbohannon.com
     $MenuLevel_Token              += , @($LineSpacing, 'ARGUMENT'   , 'Obfuscate <Argument> tokens')
     $MenuLevel_Token              += , @($LineSpacing, 'MEMBER'     , 'Obfuscate <Member> tokens')
     $MenuLevel_Token              += , @($LineSpacing, 'VARIABLE'   , 'Obfuscate <Variable> tokens')
-    # Commented out Type token obfuscation since it errors after PS 2.0 (i.e. [In`T][C`har]123 works in PS2.0 but not in later versions)
-    #$MenuLevel_Token              += , @($LineSpacing, 'TYPE  '     , 'Obfuscate <Type> tokens')
     $MenuLevel_Token              += , @($LineSpacing, 'COMMENT'   , 'Remove all <Comment> tokens')
     $MenuLevel_Token              += , @($LineSpacing, 'WHITESPACE' , 'Insert random <Whitespace> (suggested to run last)')
     $MenuLevel_Token              += , @($LineSpacing, 'ALL   '     , 'Select <All> choices from above (random order)')
     
     $MenuLevel_Token_String        =   @()
-    $MenuLevel_Token_String       += , @($LineSpacing, '1' , "Concatenate --> e.g. <('co'+'ffe'+'e')>"                     , @('Out-ObfuscatedTokenCommand', 'String', 1))
+    $MenuLevel_Token_String       += , @($LineSpacing, '1' , "Concatenate --> e.g. <('co'+'ffe'+'e')>"                           , @('Out-ObfuscatedTokenCommand', 'String', 1))
+    $MenuLevel_Token_String       += , @($LineSpacing, '2' , "Reorder     --> e.g. <('{1}{0}'-f'ffee','co')>"                    , @('Out-ObfuscatedTokenCommand', 'String', 2))
     
     $MenuLevel_Token_Command       =   @()
-    $MenuLevel_Token_Command      += , @($LineSpacing, '1' , 'Ticks     --> e.g. <Ne`w-O`Bject>'                           , @('Out-ObfuscatedTokenCommand', 'Command', 1))
-    $MenuLevel_Token_Command      += , @($LineSpacing, '2' , "Splatting --> e.g. <&('Ne'+'w-Ob'+'ject')>"                  , @('Out-ObfuscatedTokenCommand', 'Command', 2))
+    $MenuLevel_Token_Command      += , @($LineSpacing, '1' , 'Ticks                   --> e.g. <Ne`w-O`Bject>'                   , @('Out-ObfuscatedTokenCommand', 'Command', 1))
+    $MenuLevel_Token_Command      += , @($LineSpacing, '2' , "Splatting + Concatenate --> e.g. <&('Ne'+'w-Ob'+'ject')>"          , @('Out-ObfuscatedTokenCommand', 'Command', 2))
+    $MenuLevel_Token_Command      += , @($LineSpacing, '3' , "Splatting + Reorder     --> e.g. <&('{1}{0}'-f'bject','New-O')>"   , @('Out-ObfuscatedTokenCommand', 'Command', 3))
     
     $MenuLevel_Token_Argument      =   @()
-    $MenuLevel_Token_Argument     += , @($LineSpacing, '1' , 'Random Case --> e.g. <nEt.weBclIenT>'                        , @('Out-ObfuscatedTokenCommand', 'CommandArgument', 1))
-    $MenuLevel_Token_Argument     += , @($LineSpacing, '2' , 'Ticks       --> e.g. <nE`T.we`Bc`lIe`NT>'                    , @('Out-ObfuscatedTokenCommand', 'CommandArgument', 2))
-    $MenuLevel_Token_Argument     += , @($LineSpacing, '3' , "Concatenate --> e.g. <('Ne'+'t.We'+'bClient')>"              , @('Out-ObfuscatedTokenCommand', 'CommandArgument', 3))
+    $MenuLevel_Token_Argument     += , @($LineSpacing, '1' , 'Random Case --> e.g. <nEt.weBclIenT>'                              , @('Out-ObfuscatedTokenCommand', 'CommandArgument', 1))
+    $MenuLevel_Token_Argument     += , @($LineSpacing, '2' , 'Ticks       --> e.g. <nE`T.we`Bc`lIe`NT>'                          , @('Out-ObfuscatedTokenCommand', 'CommandArgument', 2))
+    $MenuLevel_Token_Argument     += , @($LineSpacing, '3' , "Concatenate --> e.g. <('Ne'+'t.We'+'bClient')>"                    , @('Out-ObfuscatedTokenCommand', 'CommandArgument', 3))
+    $MenuLevel_Token_Argument     += , @($LineSpacing, '4' , "Reorder     --> e.g. <('{1}{0}'-f'bClient','Net.We')>"             , @('Out-ObfuscatedTokenCommand', 'CommandArgument', 4))
     
     $MenuLevel_Token_Member        =   @()
-    $MenuLevel_Token_Member       += , @($LineSpacing, '1' , 'Random Case --> e.g. <dOwnLoAdsTRing>'                       , @('Out-ObfuscatedTokenCommand', 'Member', 1))
-    $MenuLevel_Token_Member       += , @($LineSpacing, '2' , 'Ticks       --> e.g. <d`Ow`NLoAd`STRin`g>'                   , @('Out-ObfuscatedTokenCommand', 'Member', 2))
-    $MenuLevel_Token_Member       += , @($LineSpacing, '3' , "Concatenate --> e.g. <('dOwnLo'+'AdsT'+'Ring').Invoke()>"    , @('Out-ObfuscatedTokenCommand', 'Member', 3))
+    $MenuLevel_Token_Member       += , @($LineSpacing, '1' , 'Random Case --> e.g. <dOwnLoAdsTRing>'                             , @('Out-ObfuscatedTokenCommand', 'Member', 1))
+    $MenuLevel_Token_Member       += , @($LineSpacing, '2' , 'Ticks       --> e.g. <d`Ow`NLoAd`STRin`g>'                         , @('Out-ObfuscatedTokenCommand', 'Member', 2))
+    $MenuLevel_Token_Member       += , @($LineSpacing, '3' , "Concatenate --> e.g. <('dOwnLo'+'AdsT'+'Ring').Invoke()>"          , @('Out-ObfuscatedTokenCommand', 'Member', 3))
+    $MenuLevel_Token_Member       += , @($LineSpacing, '4' , "Reorder     --> e.g. <('{1}{0}'-f'dString','Downloa').Invoke()>"   , @('Out-ObfuscatedTokenCommand', 'Member', 4))
     
     $MenuLevel_Token_Variable      =   @()
-    $MenuLevel_Token_Variable     += , @($LineSpacing, '1' , 'Random Case + {} + Ticks --> e.g. <${c`hEm`eX}>'             , @('Out-ObfuscatedTokenCommand', 'Variable', 1))
-    
-    # Commented out Type token obfuscation since it errors after PS 2.0 (i.e. [In`T][C`har]123 works in PS2.0 but not in later versions)
-    #$MenuLevel_Token_Type          =   @()
-    #$MenuLevel_Token_Type         += , @($LineSpacing, '1' , 'Random Case + Ticks --> e.g. <[s`TRi`Ng]$NotAString>'        , @('Out-ObfuscatedTokenCommand', 'Type', 1))
+    $MenuLevel_Token_Variable     += , @($LineSpacing, '1' , 'Random Case + {} + Ticks --> e.g. <${c`hEm`eX}>'                   , @('Out-ObfuscatedTokenCommand', 'Variable', 1))
     
     $MenuLevel_Token_Whitespace    =   @()
-    $MenuLevel_Token_Whitespace   += , @($LineSpacing, '1' , "`tRandom Whitespace --> e.g. <.( 'Ne'  +'w-Ob' +  'ject')>"  , @('Out-ObfuscatedTokenCommand', 'RandomWhitespace', 1))
+    $MenuLevel_Token_Whitespace   += , @($LineSpacing, '1' , "`tRandom Whitespace --> e.g. <.( 'Ne'  +'w-Ob' +  'ject')>"        , @('Out-ObfuscatedTokenCommand', 'RandomWhitespace', 1))
     
     $MenuLevel_Token_Comment       =   @()
-    $MenuLevel_Token_Comment      += , @($LineSpacing, '1' , "Remove Comments   --> e.g. self-explanatory"                 , @('Out-ObfuscatedTokenCommand', 'Comment', 1))
+    $MenuLevel_Token_Comment      += , @($LineSpacing, '1' , "Remove Comments   --> e.g. self-explanatory"                       , @('Out-ObfuscatedTokenCommand', 'Comment', 1))
 
     $MenuLevel_Token_All           =   @()
-    $MenuLevel_Token_All          += , @($LineSpacing, '1' , "`tExecute <ALL> Token obfuscation techniques (random order)" , @('Out-ObfuscatedTokenCommandAll', '', ''))
+    $MenuLevel_Token_All          += , @($LineSpacing, '1' , "`tExecute <ALL> Token obfuscation techniques (random order)"       , @('Out-ObfuscatedTokenCommandAll', '', ''))
     
     # Main\String Menu.
     $MenuLevel_String              =   @()
-    $MenuLevel_String             += , @($LineSpacing, '1' , '<Concatenate> entire command'                                , @('Out-ObfuscatedStringCommand', '', 1))
-    $MenuLevel_String             += , @($LineSpacing, '2' , '<Reorder> entire command after concatenating'                , @('Out-ObfuscatedStringCommand', '', 2))
-    $MenuLevel_String             += , @($LineSpacing, '3' , '<Reverse> entire command after concatenating'                , @('Out-ObfuscatedStringCommand', '', 3))
+    $MenuLevel_String             += , @($LineSpacing, '1' , '<Concatenate> entire command'                                      , @('Out-ObfuscatedStringCommand', '', 1))
+    $MenuLevel_String             += , @($LineSpacing, '2' , '<Reorder> entire command after concatenating'                      , @('Out-ObfuscatedStringCommand', '', 2))
+    $MenuLevel_String             += , @($LineSpacing, '3' , '<Reverse> entire command after concatenating'                      , @('Out-ObfuscatedStringCommand', '', 3))
 
     # Main\Encoding Menu.
     $MenuLevel_Encoding            =   @()
-    $MenuLevel_Encoding           += , @($LineSpacing, '1' , "`tEncode entire command as <ASCII>"                          , @('Out-EncodedAsciiCommand' , '', ''))
-    $MenuLevel_Encoding           += , @($LineSpacing, '2' , "`tEncode entire command as <Hex>"                            , @('Out-EncodedHexCommand'   , '', ''))
-    $MenuLevel_Encoding           += , @($LineSpacing, '3' , "`tEncode entire command as <Octal>"                          , @('Out-EncodedOctalCommand' , '', ''))
-    $MenuLevel_Encoding           += , @($LineSpacing, '4' , "`tEncode entire command as <Binary>"                         , @('Out-EncodedBinaryCommand', '', ''))
-    $MenuLevel_Encoding           += , @($LineSpacing, '5' , "`tEncrypt entire command as <SecureString> (AES)"            , @('Out-SecureStringCommand' , '', ''))
+    $MenuLevel_Encoding           += , @($LineSpacing, '1' , "`tEncode entire command as <ASCII>"                                , @('Out-EncodedAsciiCommand' , '', ''))
+    $MenuLevel_Encoding           += , @($LineSpacing, '2' , "`tEncode entire command as <Hex>"                                  , @('Out-EncodedHexCommand'   , '', ''))
+    $MenuLevel_Encoding           += , @($LineSpacing, '3' , "`tEncode entire command as <Octal>"                                , @('Out-EncodedOctalCommand' , '', ''))
+    $MenuLevel_Encoding           += , @($LineSpacing, '4' , "`tEncode entire command as <Binary>"                               , @('Out-EncodedBinaryCommand', '', ''))
+    $MenuLevel_Encoding           += , @($LineSpacing, '5' , "`tEncrypt entire command as <SecureString> (AES)"                  , @('Out-SecureStringCommand' , '', ''))
 
     # Main\Launcher Menu.
     $MenuLevel_Launcher            =   @()
@@ -521,7 +519,7 @@ http://www.danielbohannon.com
             $UserInputOptionValue = $NULL
             $HasError = $FALSE
     
-            $UserInputMinusSet    = $UserInput.SubString(4).Trim()
+            $UserInputMinusSet = $UserInput.SubString(4).Trim()
             If($UserInputMinusSet.IndexOf(' ') -eq -1)
             {
                 $HasError = $TRUE
@@ -541,7 +539,7 @@ http://www.danielbohannon.com
                 Switch($UserInputOptionName.ToLower())
                 {
                     'scriptpath' {
-                        If((Test-Path $UserInputOptionValue) -OR ($UserInputOptionValue -Match '(http|https)://'))
+                        If($UserInputOptionValue -AND ((Test-Path $UserInputOptionValue) -OR ($UserInputOptionValue -Match '(http|https)://')))
                         {
                             # Reset ScriptBlock in case it contained a value.
                             $Script:ScriptBlock = ''
@@ -1341,7 +1339,7 @@ http://www.danielbohannon.com
     Write-Host " :: Here is a quick tutorial showing you how to get your obfuscation on:"
     
     Write-Host "`n1) " -NoNewLine -ForegroundColor Cyan
-    Write-Host "Load a scriptblock (SET SCRIPTBLOCK) or a script path or URL (SET SCRIPTPATH)."
+    Write-Host "Load a scriptblock (SET SCRIPTBLOCK) or a script path/URL (SET SCRIPTPATH)."
     Write-Host "   SET SCRIPTBLOCK Write-Host 'This is my test command' -ForegroundColor Green" -ForegroundColor Green
     
     Write-Host "`n2) " -NoNewLine -ForegroundColor Cyan
@@ -1600,7 +1598,7 @@ http://www.danielbohannon.com
     Write-Host "`tTwitter :: @danielhbohannon" -ForegroundColor Magenta
     Write-Host "`tBlog    :: http://danielbohannon.com" -ForegroundColor Magenta
     Write-Host "`tGithub  :: https://github.com/danielbohannon/Invoke-Obfuscation" -ForegroundColor Magenta
-    Write-Host "`tVersion :: 1.0" -ForegroundColor Magenta
+    Write-Host "`tVersion :: 1.1" -ForegroundColor Magenta
     Write-Host "`tLicense :: Apache License, Version 2.0" -ForegroundColor Magenta
     Write-Host "`tNotes   :: If(!`$Caffeinated) {Exit}" -ForegroundColor Magenta
 }
