@@ -1,4 +1,4 @@
-Invoke-Obfuscation v1.1
+Invoke-Obfuscation v1.2
 ===============
 
 Introduction
@@ -71,3 +71,5 @@ Release Notes
 v1.0 - 2016-09-25 DerbyCon 6.0, Louisville: PUBLIC Release of Invoke-Obfuscation
 
 v1.1 - 2016-10-09 SANS DFIR Summit, Prague: Added -f format operator re-ordering functionality to all applicable Token obfuscation functions. Also added additional syntax options for setting variable values.
+
+v1.2 - 2016-10-13 Code Blue, Tokyo: Added Type token obfuscation (direct type casting with string obfuscation options for type name).

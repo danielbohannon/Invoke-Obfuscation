@@ -79,6 +79,7 @@ http://www.danielbohannon.com
     $MenuLevel_Token              += , @($LineSpacing, 'ARGUMENT'   , 'Obfuscate <Argument> tokens')
     $MenuLevel_Token              += , @($LineSpacing, 'MEMBER'     , 'Obfuscate <Member> tokens')
     $MenuLevel_Token              += , @($LineSpacing, 'VARIABLE'   , 'Obfuscate <Variable> tokens')
+    $MenuLevel_Token              += , @($LineSpacing, 'TYPE  '     , 'Obfuscate <Type> tokens')
     $MenuLevel_Token              += , @($LineSpacing, 'COMMENT'   , 'Remove all <Comment> tokens')
     $MenuLevel_Token              += , @($LineSpacing, 'WHITESPACE' , 'Insert random <Whitespace> (suggested to run last)')
     $MenuLevel_Token              += , @($LineSpacing, 'ALL   '     , 'Select <All> choices from above (random order)')
@@ -106,6 +107,10 @@ http://www.danielbohannon.com
     
     $MenuLevel_Token_Variable      =   @()
     $MenuLevel_Token_Variable     += , @($LineSpacing, '1' , 'Random Case + {} + Ticks --> e.g. <${c`hEm`eX}>'                   , @('Out-ObfuscatedTokenCommand', 'Variable', 1))
+    
+    $MenuLevel_Token_Type          =   @()
+    $MenuLevel_Token_Type         += , @($LineSpacing, '1' , "Type Cast + Concatenate --> e.g. <[Type]('Con'+'sole')>"           , @('Out-ObfuscatedTokenCommand', 'Type', 1))
+    $MenuLevel_Token_Type         += , @($LineSpacing, '2' , "Type Cast + Reordered   --> e.g. <[Type]('{1}{0}'-f'sole','Con')>" , @('Out-ObfuscatedTokenCommand', 'Type', 2))
     
     $MenuLevel_Token_Whitespace    =   @()
     $MenuLevel_Token_Whitespace   += , @($LineSpacing, '1' , "`tRandom Whitespace --> e.g. <.( 'Ne'  +'w-Ob' +  'ject')>"        , @('Out-ObfuscatedTokenCommand', 'RandomWhitespace', 1))
@@ -1598,7 +1603,7 @@ http://www.danielbohannon.com
     Write-Host "`tTwitter :: @danielhbohannon" -ForegroundColor Magenta
     Write-Host "`tBlog    :: http://danielbohannon.com" -ForegroundColor Magenta
     Write-Host "`tGithub  :: https://github.com/danielbohannon/Invoke-Obfuscation" -ForegroundColor Magenta
-    Write-Host "`tVersion :: 1.1" -ForegroundColor Magenta
+    Write-Host "`tVersion :: 1.2" -ForegroundColor Magenta
     Write-Host "`tLicense :: Apache License, Version 2.0" -ForegroundColor Magenta
     Write-Host "`tNotes   :: If(!`$Caffeinated) {Exit}" -ForegroundColor Magenta
 }
