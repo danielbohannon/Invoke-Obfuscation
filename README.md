@@ -68,10 +68,22 @@ Invoke-Obfuscation is released under the Apache 2.0 license.
 
 Release Notes
 -------------
-v1.0 - 2016-09-25 DerbyCon 6.0, Louisville: PUBLIC Release of Invoke-Obfuscation
+v1.0 - 2016-09-25 DerbyCon 6.0, Louisville: PUBLIC Release of Invoke-Obfuscation.
 
-v1.1 - 2016-10-09 SANS DFIR Summit, Prague: Added -f format operator re-ordering functionality to all applicable Token obfuscation functions. Also added additional syntax options for setting variable values.
+v1.1 - 2016-10-09 SANS DFIR Summit, Prague: Added -f format operator re-ordering 
+functionality to all applicable TOKEN obfuscation functions. Also added additional 
+syntax options for setting variable values.
 
-v1.2 - 2016-10-20 Code Blue, Tokyo: Added Type token obfuscation (direct type casting with string obfuscation options for type name).
+v1.2 - 2016-10-20 CODE BLUE, Tokyo: Added Type TOKEN obfuscation (direct type 
+casting with string obfuscation options for type name).
 
-v1.3 - 2016-10-22 Hacktivity, Budapest: Added two new LAUNCHER techniques: CLIP+ and CLIP++. Also added additional (and simpler) array char conversion syntax for all ENCODING functions that does not require For-EachObject/%.
+v1.3 - 2016-10-22 Hacktivity, Budapest: Added two new LAUNCHERs: CLIP+ and CLIP++. 
+Also added additional (and simpler) array char conversion syntax for all ENCODING 
+functions that does not require For-EachObject/%.
+
+v1.4 - 2016-10-28 BruCON, Gent: Added new BXOR ENCODING function. Also enhanced 
+randomized case for all components of all ENCODING functions as well as for 
+PowerShell execution flags for all LAUNCHERs. Finally, added -EP shorthand option 
+for -ExecutionPolicy to all LAUNCHERs as well as the optional integer representation 
+of the -WindowStyle PowerShell execution flag: Normal (0), Hidden (1), Minimized (2), 
+Maximized (3).

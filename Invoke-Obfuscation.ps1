@@ -73,174 +73,175 @@ http://www.danielbohannon.com
     $MenuLevel += , @($LineSpacing, 'LAUNCHER' , 'Obfuscate command args w/<Launcher> techniques (run once at end)')
     
     # Main\Token Menu.
-    $MenuLevel_Token               =   @()
-    $MenuLevel_Token              += , @($LineSpacing, 'STRING'     , 'Obfuscate <String> tokens (suggested to run first)')
-    $MenuLevel_Token              += , @($LineSpacing, 'COMMAND'    , 'Obfuscate <Command> tokens')
-    $MenuLevel_Token              += , @($LineSpacing, 'ARGUMENT'   , 'Obfuscate <Argument> tokens')
-    $MenuLevel_Token              += , @($LineSpacing, 'MEMBER'     , 'Obfuscate <Member> tokens')
-    $MenuLevel_Token              += , @($LineSpacing, 'VARIABLE'   , 'Obfuscate <Variable> tokens')
-    $MenuLevel_Token              += , @($LineSpacing, 'TYPE  '     , 'Obfuscate <Type> tokens')
-    $MenuLevel_Token              += , @($LineSpacing, 'COMMENT'   , 'Remove all <Comment> tokens')
-    $MenuLevel_Token              += , @($LineSpacing, 'WHITESPACE' , 'Insert random <Whitespace> (suggested to run last)')
-    $MenuLevel_Token              += , @($LineSpacing, 'ALL   '     , 'Select <All> choices from above (random order)')
+    $MenuLevel_Token                =   @()
+    $MenuLevel_Token               += , @($LineSpacing, 'STRING'     , 'Obfuscate <String> tokens (suggested to run first)')
+    $MenuLevel_Token               += , @($LineSpacing, 'COMMAND'    , 'Obfuscate <Command> tokens')
+    $MenuLevel_Token               += , @($LineSpacing, 'ARGUMENT'   , 'Obfuscate <Argument> tokens')
+    $MenuLevel_Token               += , @($LineSpacing, 'MEMBER'     , 'Obfuscate <Member> tokens')
+    $MenuLevel_Token               += , @($LineSpacing, 'VARIABLE'   , 'Obfuscate <Variable> tokens')
+    $MenuLevel_Token               += , @($LineSpacing, 'TYPE  '     , 'Obfuscate <Type> tokens')
+    $MenuLevel_Token               += , @($LineSpacing, 'COMMENT'   , 'Remove all <Comment> tokens')
+    $MenuLevel_Token               += , @($LineSpacing, 'WHITESPACE' , 'Insert random <Whitespace> (suggested to run last)')
+    $MenuLevel_Token               += , @($LineSpacing, 'ALL   '     , 'Select <All> choices from above (random order)')
     
-    $MenuLevel_Token_String        =   @()
-    $MenuLevel_Token_String       += , @($LineSpacing, '1' , "Concatenate --> e.g. <('co'+'ffe'+'e')>"                           , @('Out-ObfuscatedTokenCommand', 'String', 1))
-    $MenuLevel_Token_String       += , @($LineSpacing, '2' , "Reorder     --> e.g. <('{1}{0}'-f'ffee','co')>"                    , @('Out-ObfuscatedTokenCommand', 'String', 2))
+    $MenuLevel_Token_String         =   @()
+    $MenuLevel_Token_String        += , @($LineSpacing, '1' , "Concatenate --> e.g. <('co'+'ffe'+'e')>"                           , @('Out-ObfuscatedTokenCommand', 'String', 1))
+    $MenuLevel_Token_String        += , @($LineSpacing, '2' , "Reorder     --> e.g. <('{1}{0}'-f'ffee','co')>"                    , @('Out-ObfuscatedTokenCommand', 'String', 2))
     
-    $MenuLevel_Token_Command       =   @()
-    $MenuLevel_Token_Command      += , @($LineSpacing, '1' , 'Ticks                   --> e.g. <Ne`w-O`Bject>'                   , @('Out-ObfuscatedTokenCommand', 'Command', 1))
-    $MenuLevel_Token_Command      += , @($LineSpacing, '2' , "Splatting + Concatenate --> e.g. <&('Ne'+'w-Ob'+'ject')>"          , @('Out-ObfuscatedTokenCommand', 'Command', 2))
-    $MenuLevel_Token_Command      += , @($LineSpacing, '3' , "Splatting + Reorder     --> e.g. <&('{1}{0}'-f'bject','New-O')>"   , @('Out-ObfuscatedTokenCommand', 'Command', 3))
+    $MenuLevel_Token_Command        =   @()
+    $MenuLevel_Token_Command       += , @($LineSpacing, '1' , 'Ticks                   --> e.g. <Ne`w-O`Bject>'                   , @('Out-ObfuscatedTokenCommand', 'Command', 1))
+    $MenuLevel_Token_Command       += , @($LineSpacing, '2' , "Splatting + Concatenate --> e.g. <&('Ne'+'w-Ob'+'ject')>"          , @('Out-ObfuscatedTokenCommand', 'Command', 2))
+    $MenuLevel_Token_Command       += , @($LineSpacing, '3' , "Splatting + Reorder     --> e.g. <&('{1}{0}'-f'bject','New-O')>"   , @('Out-ObfuscatedTokenCommand', 'Command', 3))
     
-    $MenuLevel_Token_Argument      =   @()
-    $MenuLevel_Token_Argument     += , @($LineSpacing, '1' , 'Random Case --> e.g. <nEt.weBclIenT>'                              , @('Out-ObfuscatedTokenCommand', 'CommandArgument', 1))
-    $MenuLevel_Token_Argument     += , @($LineSpacing, '2' , 'Ticks       --> e.g. <nE`T.we`Bc`lIe`NT>'                          , @('Out-ObfuscatedTokenCommand', 'CommandArgument', 2))
-    $MenuLevel_Token_Argument     += , @($LineSpacing, '3' , "Concatenate --> e.g. <('Ne'+'t.We'+'bClient')>"                    , @('Out-ObfuscatedTokenCommand', 'CommandArgument', 3))
-    $MenuLevel_Token_Argument     += , @($LineSpacing, '4' , "Reorder     --> e.g. <('{1}{0}'-f'bClient','Net.We')>"             , @('Out-ObfuscatedTokenCommand', 'CommandArgument', 4))
+    $MenuLevel_Token_Argument       =   @()
+    $MenuLevel_Token_Argument      += , @($LineSpacing, '1' , 'Random Case --> e.g. <nEt.weBclIenT>'                              , @('Out-ObfuscatedTokenCommand', 'CommandArgument', 1))
+    $MenuLevel_Token_Argument      += , @($LineSpacing, '2' , 'Ticks       --> e.g. <nE`T.we`Bc`lIe`NT>'                          , @('Out-ObfuscatedTokenCommand', 'CommandArgument', 2))
+    $MenuLevel_Token_Argument      += , @($LineSpacing, '3' , "Concatenate --> e.g. <('Ne'+'t.We'+'bClient')>"                    , @('Out-ObfuscatedTokenCommand', 'CommandArgument', 3))
+    $MenuLevel_Token_Argument      += , @($LineSpacing, '4' , "Reorder     --> e.g. <('{1}{0}'-f'bClient','Net.We')>"             , @('Out-ObfuscatedTokenCommand', 'CommandArgument', 4))
     
-    $MenuLevel_Token_Member        =   @()
-    $MenuLevel_Token_Member       += , @($LineSpacing, '1' , 'Random Case --> e.g. <dOwnLoAdsTRing>'                             , @('Out-ObfuscatedTokenCommand', 'Member', 1))
-    $MenuLevel_Token_Member       += , @($LineSpacing, '2' , 'Ticks       --> e.g. <d`Ow`NLoAd`STRin`g>'                         , @('Out-ObfuscatedTokenCommand', 'Member', 2))
-    $MenuLevel_Token_Member       += , @($LineSpacing, '3' , "Concatenate --> e.g. <('dOwnLo'+'AdsT'+'Ring').Invoke()>"          , @('Out-ObfuscatedTokenCommand', 'Member', 3))
-    $MenuLevel_Token_Member       += , @($LineSpacing, '4' , "Reorder     --> e.g. <('{1}{0}'-f'dString','Downloa').Invoke()>"   , @('Out-ObfuscatedTokenCommand', 'Member', 4))
+    $MenuLevel_Token_Member         =   @()
+    $MenuLevel_Token_Member        += , @($LineSpacing, '1' , 'Random Case --> e.g. <dOwnLoAdsTRing>'                             , @('Out-ObfuscatedTokenCommand', 'Member', 1))
+    $MenuLevel_Token_Member        += , @($LineSpacing, '2' , 'Ticks       --> e.g. <d`Ow`NLoAd`STRin`g>'                         , @('Out-ObfuscatedTokenCommand', 'Member', 2))
+    $MenuLevel_Token_Member        += , @($LineSpacing, '3' , "Concatenate --> e.g. <('dOwnLo'+'AdsT'+'Ring').Invoke()>"          , @('Out-ObfuscatedTokenCommand', 'Member', 3))
+    $MenuLevel_Token_Member        += , @($LineSpacing, '4' , "Reorder     --> e.g. <('{1}{0}'-f'dString','Downloa').Invoke()>"   , @('Out-ObfuscatedTokenCommand', 'Member', 4))
     
-    $MenuLevel_Token_Variable      =   @()
-    $MenuLevel_Token_Variable     += , @($LineSpacing, '1' , 'Random Case + {} + Ticks --> e.g. <${c`hEm`eX}>'                   , @('Out-ObfuscatedTokenCommand', 'Variable', 1))
+    $MenuLevel_Token_Variable       =   @()
+    $MenuLevel_Token_Variable      += , @($LineSpacing, '1' , 'Random Case + {} + Ticks --> e.g. <${c`hEm`eX}>'                   , @('Out-ObfuscatedTokenCommand', 'Variable', 1))
     
-    $MenuLevel_Token_Type          =   @()
-    $MenuLevel_Token_Type         += , @($LineSpacing, '1' , "Type Cast + Concatenate --> e.g. <[Type]('Con'+'sole')>"           , @('Out-ObfuscatedTokenCommand', 'Type', 1))
-    $MenuLevel_Token_Type         += , @($LineSpacing, '2' , "Type Cast + Reordered   --> e.g. <[Type]('{1}{0}'-f'sole','Con')>" , @('Out-ObfuscatedTokenCommand', 'Type', 2))
+    $MenuLevel_Token_Type           =   @()
+    $MenuLevel_Token_Type          += , @($LineSpacing, '1' , "Type Cast + Concatenate --> e.g. <[Type]('Con'+'sole')>"           , @('Out-ObfuscatedTokenCommand', 'Type', 1))
+    $MenuLevel_Token_Type          += , @($LineSpacing, '2' , "Type Cast + Reordered   --> e.g. <[Type]('{1}{0}'-f'sole','Con')>" , @('Out-ObfuscatedTokenCommand', 'Type', 2))
     
-    $MenuLevel_Token_Whitespace    =   @()
-    $MenuLevel_Token_Whitespace   += , @($LineSpacing, '1' , "`tRandom Whitespace --> e.g. <.( 'Ne'  +'w-Ob' +  'ject')>"        , @('Out-ObfuscatedTokenCommand', 'RandomWhitespace', 1))
+    $MenuLevel_Token_Whitespace     =   @()
+    $MenuLevel_Token_Whitespace    += , @($LineSpacing, '1' , "`tRandom Whitespace --> e.g. <.( 'Ne'  +'w-Ob' +  'ject')>"        , @('Out-ObfuscatedTokenCommand', 'RandomWhitespace', 1))
     
-    $MenuLevel_Token_Comment       =   @()
-    $MenuLevel_Token_Comment      += , @($LineSpacing, '1' , "Remove Comments   --> e.g. self-explanatory"                       , @('Out-ObfuscatedTokenCommand', 'Comment', 1))
+    $MenuLevel_Token_Comment        =   @()
+    $MenuLevel_Token_Comment       += , @($LineSpacing, '1' , "Remove Comments   --> e.g. self-explanatory"                       , @('Out-ObfuscatedTokenCommand', 'Comment', 1))
 
-    $MenuLevel_Token_All           =   @()
-    $MenuLevel_Token_All          += , @($LineSpacing, '1' , "`tExecute <ALL> Token obfuscation techniques (random order)"       , @('Out-ObfuscatedTokenCommandAll', '', ''))
+    $MenuLevel_Token_All            =   @()
+    $MenuLevel_Token_All           += , @($LineSpacing, '1' , "`tExecute <ALL> Token obfuscation techniques (random order)"       , @('Out-ObfuscatedTokenCommandAll', '', ''))
     
     # Main\String Menu.
-    $MenuLevel_String              =   @()
-    $MenuLevel_String             += , @($LineSpacing, '1' , '<Concatenate> entire command'                                      , @('Out-ObfuscatedStringCommand', '', 1))
-    $MenuLevel_String             += , @($LineSpacing, '2' , '<Reorder> entire command after concatenating'                      , @('Out-ObfuscatedStringCommand', '', 2))
-    $MenuLevel_String             += , @($LineSpacing, '3' , '<Reverse> entire command after concatenating'                      , @('Out-ObfuscatedStringCommand', '', 3))
+    $MenuLevel_String               =   @()
+    $MenuLevel_String              += , @($LineSpacing, '1' , '<Concatenate> entire command'                                      , @('Out-ObfuscatedStringCommand', '', 1))
+    $MenuLevel_String              += , @($LineSpacing, '2' , '<Reorder> entire command after concatenating'                      , @('Out-ObfuscatedStringCommand', '', 2))
+    $MenuLevel_String              += , @($LineSpacing, '3' , '<Reverse> entire command after concatenating'                      , @('Out-ObfuscatedStringCommand', '', 3))
 
     # Main\Encoding Menu.
-    $MenuLevel_Encoding            =   @()
-    $MenuLevel_Encoding           += , @($LineSpacing, '1' , "`tEncode entire command as <ASCII>"                                , @('Out-EncodedAsciiCommand' , '', ''))
-    $MenuLevel_Encoding           += , @($LineSpacing, '2' , "`tEncode entire command as <Hex>"                                  , @('Out-EncodedHexCommand'   , '', ''))
-    $MenuLevel_Encoding           += , @($LineSpacing, '3' , "`tEncode entire command as <Octal>"                                , @('Out-EncodedOctalCommand' , '', ''))
-    $MenuLevel_Encoding           += , @($LineSpacing, '4' , "`tEncode entire command as <Binary>"                               , @('Out-EncodedBinaryCommand', '', ''))
-    $MenuLevel_Encoding           += , @($LineSpacing, '5' , "`tEncrypt entire command as <SecureString> (AES)"                  , @('Out-SecureStringCommand' , '', ''))
+    $MenuLevel_Encoding             =   @()
+    $MenuLevel_Encoding            += , @($LineSpacing, '1' , "`tEncode entire command as <ASCII>"                                , @('Out-EncodedAsciiCommand' , '', ''))
+    $MenuLevel_Encoding            += , @($LineSpacing, '2' , "`tEncode entire command as <Hex>"                                  , @('Out-EncodedHexCommand'   , '', ''))
+    $MenuLevel_Encoding            += , @($LineSpacing, '3' , "`tEncode entire command as <Octal>"                                , @('Out-EncodedOctalCommand' , '', ''))
+    $MenuLevel_Encoding            += , @($LineSpacing, '4' , "`tEncode entire command as <Binary>"                               , @('Out-EncodedBinaryCommand', '', ''))
+    $MenuLevel_Encoding            += , @($LineSpacing, '5' , "`tEncrypt entire command as <SecureString> (AES)"                  , @('Out-SecureStringCommand' , '', ''))
+    $MenuLevel_Encoding            += , @($LineSpacing, '6' , "`tEncode entire command as <BXOR>"                                 , @('Out-EncodedBXORCommand'  , '', ''))
 
     # Main\Launcher Menu.
-    $MenuLevel_Launcher            =   @()
-    $MenuLevel_Launcher           += , @($LineSpacing, 'PS'            , "`t<PowerShell>")
-    $MenuLevel_Launcher           += , @($LineSpacing, 'CMD'           , '<Cmd> + PowerShell')
-    $MenuLevel_Launcher           += , @($LineSpacing, 'VAR+'          , 'Cmd + set <Var> && PowerShell iex <Var>')
-    $MenuLevel_Launcher           += , @($LineSpacing, 'STDIN+'        , 'Cmd + <Echo> | PowerShell - (stdin)')
-    $MenuLevel_Launcher           += , @($LineSpacing, 'CLIP+'         , 'Cmd + <Echo> | Clip + PowerShell iex <clipboard>')
-    $MenuLevel_Launcher           += , @($LineSpacing, 'VAR++'         , 'Cmd + set <Var> && Cmd && PowerShell iex <Var>')
-    $MenuLevel_Launcher           += , @($LineSpacing, 'STDIN++'       , 'Cmd + set <Var> && Cmd <Echo> | PowerShell - (stdin)')
-    $MenuLevel_Launcher           += , @($LineSpacing, 'CLIP++'        , 'Cmd + <Echo> | Clip + Cmd + PowerShell iex <clipboard>')
+    $MenuLevel_Launcher             =   @()
+    $MenuLevel_Launcher            += , @($LineSpacing, 'PS'            , "`t<PowerShell>")
+    $MenuLevel_Launcher            += , @($LineSpacing, 'CMD'           , '<Cmd> + PowerShell')
+    $MenuLevel_Launcher            += , @($LineSpacing, 'VAR+'          , 'Cmd + set <Var> && PowerShell iex <Var>')
+    $MenuLevel_Launcher            += , @($LineSpacing, 'STDIN+'        , 'Cmd + <Echo> | PowerShell - (stdin)')
+    $MenuLevel_Launcher            += , @($LineSpacing, 'CLIP+'         , 'Cmd + <Echo> | Clip + PowerShell iex <clipboard>')
+    $MenuLevel_Launcher            += , @($LineSpacing, 'VAR++'         , 'Cmd + set <Var> && Cmd && PowerShell iex <Var>')
+    $MenuLevel_Launcher            += , @($LineSpacing, 'STDIN++'       , 'Cmd + set <Var> && Cmd <Echo> | PowerShell - (stdin)')
+    $MenuLevel_Launcher            += , @($LineSpacing, 'CLIP++'        , 'Cmd + <Echo> | Clip + Cmd + PowerShell iex <clipboard>')
 
-    $MenuLevel_Launcher_PS         =   @()
-    $MenuLevel_Launcher_PS        += , @("Enter string of numbers with all desired flags to pass to function. (e.g. 23459)`n", ''  , ''   , @('', '', ''))
-    $MenuLevel_Launcher_PS        += , @($LineSpacing, '0' , 'NO EXECUTION FLAGS'                                          , @('Out-PowerShellLauncher', '', '1'))
-    $MenuLevel_Launcher_PS        += , @($LineSpacing, '1' , '-NoExit'                                                     , @('Out-PowerShellLauncher', '', '1'))
-    $MenuLevel_Launcher_PS        += , @($LineSpacing, '2' , '-NonInteractive'                                             , @('Out-PowerShellLauncher', '', '1'))
-    $MenuLevel_Launcher_PS        += , @($LineSpacing, '3' , '-NoLogo'                                                     , @('Out-PowerShellLauncher', '', '1'))
-    $MenuLevel_Launcher_PS        += , @($LineSpacing, '4' , '-NoProfile'                                                  , @('Out-PowerShellLauncher', '', '1'))
-    $MenuLevel_Launcher_PS        += , @($LineSpacing, '5' , '-Command'                                                    , @('Out-PowerShellLauncher', '', '1'))
-    $MenuLevel_Launcher_PS        += , @($LineSpacing, '6' , '-WindowStyle Hidden'                                         , @('Out-PowerShellLauncher', '', '1'))
-    $MenuLevel_Launcher_PS        += , @($LineSpacing, '7' , '-ExecutionPolicy Bypass'                                     , @('Out-PowerShellLauncher', '', '1'))
-    $MenuLevel_Launcher_PS        += , @($LineSpacing, '8' , '-Wow64 (to path 32-bit powershell.exe)'                      , @('Out-PowerShellLauncher', '', '1'))
+    $MenuLevel_Launcher_PS          =   @()
+    $MenuLevel_Launcher_PS         += , @("Enter string of numbers with all desired flags to pass to function. (e.g. 23459)`n", ''  , ''   , @('', '', ''))
+    $MenuLevel_Launcher_PS         += , @($LineSpacing, '0' , 'NO EXECUTION FLAGS'                                          , @('Out-PowerShellLauncher', '', '1'))
+    $MenuLevel_Launcher_PS         += , @($LineSpacing, '1' , '-NoExit'                                                     , @('Out-PowerShellLauncher', '', '1'))
+    $MenuLevel_Launcher_PS         += , @($LineSpacing, '2' , '-NonInteractive'                                             , @('Out-PowerShellLauncher', '', '1'))
+    $MenuLevel_Launcher_PS         += , @($LineSpacing, '3' , '-NoLogo'                                                     , @('Out-PowerShellLauncher', '', '1'))
+    $MenuLevel_Launcher_PS         += , @($LineSpacing, '4' , '-NoProfile'                                                  , @('Out-PowerShellLauncher', '', '1'))
+    $MenuLevel_Launcher_PS         += , @($LineSpacing, '5' , '-Command'                                                    , @('Out-PowerShellLauncher', '', '1'))
+    $MenuLevel_Launcher_PS         += , @($LineSpacing, '6' , '-WindowStyle Hidden'                                         , @('Out-PowerShellLauncher', '', '1'))
+    $MenuLevel_Launcher_PS         += , @($LineSpacing, '7' , '-ExecutionPolicy Bypass'                                     , @('Out-PowerShellLauncher', '', '1'))
+    $MenuLevel_Launcher_PS         += , @($LineSpacing, '8' , '-Wow64 (to path 32-bit powershell.exe)'                      , @('Out-PowerShellLauncher', '', '1'))
 
-    $MenuLevel_Launcher_CMD        =   @()
-    $MenuLevel_Launcher_CMD       += , @("Enter string of numbers with all desired flags to pass to function. (e.g. 23459)`n", ''  , ''   , @('', '', ''))
-    $MenuLevel_Launcher_CMD       += , @($LineSpacing, '0' , 'NO EXECUTION FLAGS'                                          , @('Out-PowerShellLauncher', '', '2'))
-    $MenuLevel_Launcher_CMD       += , @($LineSpacing, '1' , '-NoExit'                                                     , @('Out-PowerShellLauncher', '', '2'))
-    $MenuLevel_Launcher_CMD       += , @($LineSpacing, '2' , '-NonInteractive'                                             , @('Out-PowerShellLauncher', '', '2'))
-    $MenuLevel_Launcher_CMD       += , @($LineSpacing, '3' , '-NoLogo'                                                     , @('Out-PowerShellLauncher', '', '2'))
-    $MenuLevel_Launcher_CMD       += , @($LineSpacing, '4' , '-NoProfile'                                                  , @('Out-PowerShellLauncher', '', '2'))
-    $MenuLevel_Launcher_CMD       += , @($LineSpacing, '5' , '-Command'                                                    , @('Out-PowerShellLauncher', '', '2'))
-    $MenuLevel_Launcher_CMD       += , @($LineSpacing, '6' , '-WindowStyle Hidden'                                         , @('Out-PowerShellLauncher', '', '2'))
-    $MenuLevel_Launcher_CMD       += , @($LineSpacing, '7' , '-ExecutionPolicy Bypass'                                     , @('Out-PowerShellLauncher', '', '2'))
-    $MenuLevel_Launcher_CMD       += , @($LineSpacing, '8' , '-Wow64 (to path 32-bit powershell.exe)'                      , @('Out-PowerShellLauncher', '', '2'))
+    $MenuLevel_Launcher_CMD         =   @()
+    $MenuLevel_Launcher_CMD        += , @("Enter string of numbers with all desired flags to pass to function. (e.g. 23459)`n", ''  , ''   , @('', '', ''))
+    $MenuLevel_Launcher_CMD        += , @($LineSpacing, '0' , 'NO EXECUTION FLAGS'                                          , @('Out-PowerShellLauncher', '', '2'))
+    $MenuLevel_Launcher_CMD        += , @($LineSpacing, '1' , '-NoExit'                                                     , @('Out-PowerShellLauncher', '', '2'))
+    $MenuLevel_Launcher_CMD        += , @($LineSpacing, '2' , '-NonInteractive'                                             , @('Out-PowerShellLauncher', '', '2'))
+    $MenuLevel_Launcher_CMD        += , @($LineSpacing, '3' , '-NoLogo'                                                     , @('Out-PowerShellLauncher', '', '2'))
+    $MenuLevel_Launcher_CMD        += , @($LineSpacing, '4' , '-NoProfile'                                                  , @('Out-PowerShellLauncher', '', '2'))
+    $MenuLevel_Launcher_CMD        += , @($LineSpacing, '5' , '-Command'                                                    , @('Out-PowerShellLauncher', '', '2'))
+    $MenuLevel_Launcher_CMD        += , @($LineSpacing, '6' , '-WindowStyle Hidden'                                         , @('Out-PowerShellLauncher', '', '2'))
+    $MenuLevel_Launcher_CMD        += , @($LineSpacing, '7' , '-ExecutionPolicy Bypass'                                     , @('Out-PowerShellLauncher', '', '2'))
+    $MenuLevel_Launcher_CMD        += , @($LineSpacing, '8' , '-Wow64 (to path 32-bit powershell.exe)'                      , @('Out-PowerShellLauncher', '', '2'))
 
-    ${MenuLevel_Launcher_VAR+}     =   @()
-    ${MenuLevel_Launcher_VAR+}    += , @('Enter string of numbers with all desired flags to pass to function. (e.g. 23459)', ''  , ''   , @('', '', ''))
-    ${MenuLevel_Launcher_VAR+}    += , @($LineSpacing, '0' , 'NO EXECUTION FLAGS'                                          , @('Out-PowerShellLauncher', '', '3'))
-    ${MenuLevel_Launcher_VAR+}    += , @($LineSpacing, '1' , '-NoExit'                                                     , @('Out-PowerShellLauncher', '', '3'))
-    ${MenuLevel_Launcher_VAR+}    += , @($LineSpacing, '2' , '-NonInteractive'                                             , @('Out-PowerShellLauncher', '', '3'))
-    ${MenuLevel_Launcher_VAR+}    += , @($LineSpacing, '3' , '-NoLogo'                                                     , @('Out-PowerShellLauncher', '', '3'))
-    ${MenuLevel_Launcher_VAR+}    += , @($LineSpacing, '4' , '-NoProfile'                                                  , @('Out-PowerShellLauncher', '', '3'))
-    ${MenuLevel_Launcher_VAR+}    += , @($LineSpacing, '5' , '-Command'                                                    , @('Out-PowerShellLauncher', '', '3'))
-    ${MenuLevel_Launcher_VAR+}    += , @($LineSpacing, '6' , '-WindowStyle Hidden'                                         , @('Out-PowerShellLauncher', '', '3'))
-    ${MenuLevel_Launcher_VAR+}    += , @($LineSpacing, '7' , '-ExecutionPolicy Bypass'                                     , @('Out-PowerShellLauncher', '', '3'))
-    ${MenuLevel_Launcher_VAR+}    += , @($LineSpacing, '8' , '-Wow64 (to path 32-bit powershell.exe)'                      , @('Out-PowerShellLauncher', '', '3'))
+    ${MenuLevel_Launcher_VAR+}      =   @()
+    ${MenuLevel_Launcher_VAR+}     += , @('Enter string of numbers with all desired flags to pass to function. (e.g. 23459)', ''  , ''   , @('', '', ''))
+    ${MenuLevel_Launcher_VAR+}     += , @($LineSpacing, '0' , 'NO EXECUTION FLAGS'                                          , @('Out-PowerShellLauncher', '', '3'))
+    ${MenuLevel_Launcher_VAR+}     += , @($LineSpacing, '1' , '-NoExit'                                                     , @('Out-PowerShellLauncher', '', '3'))
+    ${MenuLevel_Launcher_VAR+}     += , @($LineSpacing, '2' , '-NonInteractive'                                             , @('Out-PowerShellLauncher', '', '3'))
+    ${MenuLevel_Launcher_VAR+}     += , @($LineSpacing, '3' , '-NoLogo'                                                     , @('Out-PowerShellLauncher', '', '3'))
+    ${MenuLevel_Launcher_VAR+}     += , @($LineSpacing, '4' , '-NoProfile'                                                  , @('Out-PowerShellLauncher', '', '3'))
+    ${MenuLevel_Launcher_VAR+}     += , @($LineSpacing, '5' , '-Command'                                                    , @('Out-PowerShellLauncher', '', '3'))
+    ${MenuLevel_Launcher_VAR+}     += , @($LineSpacing, '6' , '-WindowStyle Hidden'                                         , @('Out-PowerShellLauncher', '', '3'))
+    ${MenuLevel_Launcher_VAR+}     += , @($LineSpacing, '7' , '-ExecutionPolicy Bypass'                                     , @('Out-PowerShellLauncher', '', '3'))
+    ${MenuLevel_Launcher_VAR+}     += , @($LineSpacing, '8' , '-Wow64 (to path 32-bit powershell.exe)'                      , @('Out-PowerShellLauncher', '', '3'))
 
-    ${MenuLevel_Launcher_STDIN+}      =   @()
-    ${MenuLevel_Launcher_STDIN+}  += , @('Enter string of numbers with all desired flags to pass to function. (e.g. 23459)', ''  , ''   , @('', '', ''))
-    ${MenuLevel_Launcher_STDIN+}  += , @($LineSpacing, '0' , 'NO EXECUTION FLAGS'                                          , @('Out-PowerShellLauncher', '', '4'))
-    ${MenuLevel_Launcher_STDIN+}  += , @($LineSpacing, '1' , '-NoExit'                                                     , @('Out-PowerShellLauncher', '', '4'))
-    ${MenuLevel_Launcher_STDIN+}  += , @($LineSpacing, '2' , '-NonInteractive'                                             , @('Out-PowerShellLauncher', '', '4'))
-    ${MenuLevel_Launcher_STDIN+}  += , @($LineSpacing, '3' , '-NoLogo'                                                     , @('Out-PowerShellLauncher', '', '4'))
-    ${MenuLevel_Launcher_STDIN+}  += , @($LineSpacing, '4' , '-NoProfile'                                                  , @('Out-PowerShellLauncher', '', '4'))
-    ${MenuLevel_Launcher_STDIN+}  += , @($LineSpacing, '5' , '-Command'                                                    , @('Out-PowerShellLauncher', '', '4'))
-    ${MenuLevel_Launcher_STDIN+}  += , @($LineSpacing, '6' , '-WindowStyle Hidden'                                         , @('Out-PowerShellLauncher', '', '4'))
-    ${MenuLevel_Launcher_STDIN+}  += , @($LineSpacing, '7' , '-ExecutionPolicy Bypass'                                     , @('Out-PowerShellLauncher', '', '4'))
-    ${MenuLevel_Launcher_STDIN+}  += , @($LineSpacing, '8' , '-Wow64 (to path 32-bit powershell.exe)'                      , @('Out-PowerShellLauncher', '', '4'))
+    ${MenuLevel_Launcher_STDIN+}    =   @()
+    ${MenuLevel_Launcher_STDIN+}   += , @('Enter string of numbers with all desired flags to pass to function. (e.g. 23459)', ''  , ''   , @('', '', ''))
+    ${MenuLevel_Launcher_STDIN+}   += , @($LineSpacing, '0' , 'NO EXECUTION FLAGS'                                          , @('Out-PowerShellLauncher', '', '4'))
+    ${MenuLevel_Launcher_STDIN+}   += , @($LineSpacing, '1' , '-NoExit'                                                     , @('Out-PowerShellLauncher', '', '4'))
+    ${MenuLevel_Launcher_STDIN+}   += , @($LineSpacing, '2' , '-NonInteractive'                                             , @('Out-PowerShellLauncher', '', '4'))
+    ${MenuLevel_Launcher_STDIN+}   += , @($LineSpacing, '3' , '-NoLogo'                                                     , @('Out-PowerShellLauncher', '', '4'))
+    ${MenuLevel_Launcher_STDIN+}   += , @($LineSpacing, '4' , '-NoProfile'                                                  , @('Out-PowerShellLauncher', '', '4'))
+    ${MenuLevel_Launcher_STDIN+}   += , @($LineSpacing, '5' , '-Command'                                                    , @('Out-PowerShellLauncher', '', '4'))
+    ${MenuLevel_Launcher_STDIN+}   += , @($LineSpacing, '6' , '-WindowStyle Hidden'                                         , @('Out-PowerShellLauncher', '', '4'))
+    ${MenuLevel_Launcher_STDIN+}   += , @($LineSpacing, '7' , '-ExecutionPolicy Bypass'                                     , @('Out-PowerShellLauncher', '', '4'))
+    ${MenuLevel_Launcher_STDIN+}   += , @($LineSpacing, '8' , '-Wow64 (to path 32-bit powershell.exe)'                      , @('Out-PowerShellLauncher', '', '4'))
     
-    ${MenuLevel_Launcher_CLIP+}    =   @()
-    ${MenuLevel_Launcher_CLIP+}   += , @('Enter string of numbers with all desired flags to pass to function. (e.g. 23459)', ''  , ''   , @('', '', ''))
-    ${MenuLevel_Launcher_CLIP+}   += , @($LineSpacing, '0' , 'NO EXECUTION FLAGS'                                          , @('Out-PowerShellLauncher', '', '5'))
-    ${MenuLevel_Launcher_CLIP+}   += , @($LineSpacing, '1' , '-NoExit'                                                     , @('Out-PowerShellLauncher', '', '5'))
-    ${MenuLevel_Launcher_CLIP+}   += , @($LineSpacing, '2' , '-NonInteractive'                                             , @('Out-PowerShellLauncher', '', '5'))
-    ${MenuLevel_Launcher_CLIP+}   += , @($LineSpacing, '3' , '-NoLogo'                                                     , @('Out-PowerShellLauncher', '', '5'))
-    ${MenuLevel_Launcher_CLIP+}   += , @($LineSpacing, '4' , '-NoProfile'                                                  , @('Out-PowerShellLauncher', '', '5'))
-    ${MenuLevel_Launcher_CLIP+}   += , @($LineSpacing, '5' , '-Command'                                                    , @('Out-PowerShellLauncher', '', '5'))
-    ${MenuLevel_Launcher_CLIP+}   += , @($LineSpacing, '6' , '-WindowStyle Hidden'                                         , @('Out-PowerShellLauncher', '', '5'))
-    ${MenuLevel_Launcher_CLIP+}   += , @($LineSpacing, '7' , '-ExecutionPolicy Bypass'                                     , @('Out-PowerShellLauncher', '', '5'))
-    ${MenuLevel_Launcher_CLIP+}   += , @($LineSpacing, '8' , '-Wow64 (to path 32-bit powershell.exe)'                      , @('Out-PowerShellLauncher', '', '5'))
+    ${MenuLevel_Launcher_CLIP+}     =   @()
+    ${MenuLevel_Launcher_CLIP+}    += , @('Enter string of numbers with all desired flags to pass to function. (e.g. 23459)', ''  , ''   , @('', '', ''))
+    ${MenuLevel_Launcher_CLIP+}    += , @($LineSpacing, '0' , 'NO EXECUTION FLAGS'                                          , @('Out-PowerShellLauncher', '', '5'))
+    ${MenuLevel_Launcher_CLIP+}    += , @($LineSpacing, '1' , '-NoExit'                                                     , @('Out-PowerShellLauncher', '', '5'))
+    ${MenuLevel_Launcher_CLIP+}    += , @($LineSpacing, '2' , '-NonInteractive'                                             , @('Out-PowerShellLauncher', '', '5'))
+    ${MenuLevel_Launcher_CLIP+}    += , @($LineSpacing, '3' , '-NoLogo'                                                     , @('Out-PowerShellLauncher', '', '5'))
+    ${MenuLevel_Launcher_CLIP+}    += , @($LineSpacing, '4' , '-NoProfile'                                                  , @('Out-PowerShellLauncher', '', '5'))
+    ${MenuLevel_Launcher_CLIP+}    += , @($LineSpacing, '5' , '-Command'                                                    , @('Out-PowerShellLauncher', '', '5'))
+    ${MenuLevel_Launcher_CLIP+}    += , @($LineSpacing, '6' , '-WindowStyle Hidden'                                         , @('Out-PowerShellLauncher', '', '5'))
+    ${MenuLevel_Launcher_CLIP+}    += , @($LineSpacing, '7' , '-ExecutionPolicy Bypass'                                     , @('Out-PowerShellLauncher', '', '5'))
+    ${MenuLevel_Launcher_CLIP+}    += , @($LineSpacing, '8' , '-Wow64 (to path 32-bit powershell.exe)'                      , @('Out-PowerShellLauncher', '', '5'))
     
-    ${MenuLevel_Launcher_VAR++}    =   @()
-    ${MenuLevel_Launcher_VAR++}   += , @('Enter string of numbers with all desired flags to pass to function. (e.g. 23459)', ''  , ''   , @('', '', ''))
-    ${MenuLevel_Launcher_VAR++}   += , @($LineSpacing, '0' , 'NO EXECUTION FLAGS'                                          , @('Out-PowerShellLauncher', '', '6'))
-    ${MenuLevel_Launcher_VAR++}   += , @($LineSpacing, '1' , '-NoExit'                                                     , @('Out-PowerShellLauncher', '', '6'))
-    ${MenuLevel_Launcher_VAR++}   += , @($LineSpacing, '2' , '-NonInteractive'                                             , @('Out-PowerShellLauncher', '', '6'))
-    ${MenuLevel_Launcher_VAR++}   += , @($LineSpacing, '3' , '-NoLogo'                                                     , @('Out-PowerShellLauncher', '', '6'))
-    ${MenuLevel_Launcher_VAR++}   += , @($LineSpacing, '4' , '-NoProfile'                                                  , @('Out-PowerShellLauncher', '', '6'))
-    ${MenuLevel_Launcher_VAR++}   += , @($LineSpacing, '5' , '-Command'                                                    , @('Out-PowerShellLauncher', '', '6'))
-    ${MenuLevel_Launcher_VAR++}   += , @($LineSpacing, '6' , '-WindowStyle Hidden'                                         , @('Out-PowerShellLauncher', '', '6'))
-    ${MenuLevel_Launcher_VAR++}   += , @($LineSpacing, '7' , '-ExecutionPolicy Bypass'                                     , @('Out-PowerShellLauncher', '', '6'))
-    ${MenuLevel_Launcher_VAR++}   += , @($LineSpacing, '8' , '-Wow64 (to path 32-bit powershell.exe)'                      , @('Out-PowerShellLauncher', '', '6'))
+    ${MenuLevel_Launcher_VAR++}     =   @()
+    ${MenuLevel_Launcher_VAR++}    += , @('Enter string of numbers with all desired flags to pass to function. (e.g. 23459)', ''  , ''   , @('', '', ''))
+    ${MenuLevel_Launcher_VAR++}    += , @($LineSpacing, '0' , 'NO EXECUTION FLAGS'                                          , @('Out-PowerShellLauncher', '', '6'))
+    ${MenuLevel_Launcher_VAR++}    += , @($LineSpacing, '1' , '-NoExit'                                                     , @('Out-PowerShellLauncher', '', '6'))
+    ${MenuLevel_Launcher_VAR++}    += , @($LineSpacing, '2' , '-NonInteractive'                                             , @('Out-PowerShellLauncher', '', '6'))
+    ${MenuLevel_Launcher_VAR++}    += , @($LineSpacing, '3' , '-NoLogo'                                                     , @('Out-PowerShellLauncher', '', '6'))
+    ${MenuLevel_Launcher_VAR++}    += , @($LineSpacing, '4' , '-NoProfile'                                                  , @('Out-PowerShellLauncher', '', '6'))
+    ${MenuLevel_Launcher_VAR++}    += , @($LineSpacing, '5' , '-Command'                                                    , @('Out-PowerShellLauncher', '', '6'))
+    ${MenuLevel_Launcher_VAR++}    += , @($LineSpacing, '6' , '-WindowStyle Hidden'                                         , @('Out-PowerShellLauncher', '', '6'))
+    ${MenuLevel_Launcher_VAR++}    += , @($LineSpacing, '7' , '-ExecutionPolicy Bypass'                                     , @('Out-PowerShellLauncher', '', '6'))
+    ${MenuLevel_Launcher_VAR++}    += , @($LineSpacing, '8' , '-Wow64 (to path 32-bit powershell.exe)'                      , @('Out-PowerShellLauncher', '', '6'))
 
-    ${MenuLevel_Launcher_STDIN++}  =   @()
-    ${MenuLevel_Launcher_STDIN++} += , @('Enter string of numbers with all desired flags to pass to function. (e.g. 23459)', ''  , ''   , @('', '', ''))
-    ${MenuLevel_Launcher_STDIN++} += , @($LineSpacing, '0' , "`tNO EXECUTION FLAGS"                                        , @('Out-PowerShellLauncher', '', '7'))
-    ${MenuLevel_Launcher_STDIN++} += , @($LineSpacing, '1' , "`t-NoExit"                                                   , @('Out-PowerShellLauncher', '', '7'))
-    ${MenuLevel_Launcher_STDIN++} += , @($LineSpacing, '2' , "`t-NonInteractive"                                           , @('Out-PowerShellLauncher', '', '7'))
-    ${MenuLevel_Launcher_STDIN++} += , @($LineSpacing, '3' , "`t-NoLogo"                                                   , @('Out-PowerShellLauncher', '', '7'))
-    ${MenuLevel_Launcher_STDIN++} += , @($LineSpacing, '4' , "`t-NoProfile"                                                , @('Out-PowerShellLauncher', '', '7'))
-    ${MenuLevel_Launcher_STDIN++} += , @($LineSpacing, '5' , "`t-Command"                                                  , @('Out-PowerShellLauncher', '', '7'))
-    ${MenuLevel_Launcher_STDIN++} += , @($LineSpacing, '6' , "`t-WindowStyle Hidden"                                       , @('Out-PowerShellLauncher', '', '7'))
-    ${MenuLevel_Launcher_STDIN++} += , @($LineSpacing, '7' , "`t-ExecutionPolicy Bypass"                                   , @('Out-PowerShellLauncher', '', '7'))
-    ${MenuLevel_Launcher_STDIN++} += , @($LineSpacing, '8' , "`t-Wow64 (to path 32-bit powershell.exe)"                    , @('Out-PowerShellLauncher', '', '7'))
+    ${MenuLevel_Launcher_STDIN++}   =   @()
+    ${MenuLevel_Launcher_STDIN++}  += , @('Enter string of numbers with all desired flags to pass to function. (e.g. 23459)', ''  , ''   , @('', '', ''))
+    ${MenuLevel_Launcher_STDIN++}  += , @($LineSpacing, '0' , "`tNO EXECUTION FLAGS"                                        , @('Out-PowerShellLauncher', '', '7'))
+    ${MenuLevel_Launcher_STDIN++}  += , @($LineSpacing, '1' , "`t-NoExit"                                                   , @('Out-PowerShellLauncher', '', '7'))
+    ${MenuLevel_Launcher_STDIN++}  += , @($LineSpacing, '2' , "`t-NonInteractive"                                           , @('Out-PowerShellLauncher', '', '7'))
+    ${MenuLevel_Launcher_STDIN++}  += , @($LineSpacing, '3' , "`t-NoLogo"                                                   , @('Out-PowerShellLauncher', '', '7'))
+    ${MenuLevel_Launcher_STDIN++}  += , @($LineSpacing, '4' , "`t-NoProfile"                                                , @('Out-PowerShellLauncher', '', '7'))
+    ${MenuLevel_Launcher_STDIN++}  += , @($LineSpacing, '5' , "`t-Command"                                                  , @('Out-PowerShellLauncher', '', '7'))
+    ${MenuLevel_Launcher_STDIN++}  += , @($LineSpacing, '6' , "`t-WindowStyle Hidden"                                       , @('Out-PowerShellLauncher', '', '7'))
+    ${MenuLevel_Launcher_STDIN++}  += , @($LineSpacing, '7' , "`t-ExecutionPolicy Bypass"                                   , @('Out-PowerShellLauncher', '', '7'))
+    ${MenuLevel_Launcher_STDIN++}  += , @($LineSpacing, '8' , "`t-Wow64 (to path 32-bit powershell.exe)"                    , @('Out-PowerShellLauncher', '', '7'))
 
-    ${MenuLevel_Launcher_CLIP++}   =   @()
-    ${MenuLevel_Launcher_CLIP++}  += , @('Enter string of numbers with all desired flags to pass to function. (e.g. 23459)', ''  , ''   , @('', '', ''))
-    ${MenuLevel_Launcher_CLIP++}  += , @($LineSpacing, '0' , 'NO EXECUTION FLAGS'                                          , @('Out-PowerShellLauncher', '', '8'))
-    ${MenuLevel_Launcher_CLIP++}  += , @($LineSpacing, '1' , '-NoExit'                                                     , @('Out-PowerShellLauncher', '', '8'))
-    ${MenuLevel_Launcher_CLIP++}  += , @($LineSpacing, '2' , '-NonInteractive'                                             , @('Out-PowerShellLauncher', '', '8'))
-    ${MenuLevel_Launcher_CLIP++}  += , @($LineSpacing, '3' , '-NoLogo'                                                     , @('Out-PowerShellLauncher', '', '8'))
-    ${MenuLevel_Launcher_CLIP++}  += , @($LineSpacing, '4' , '-NoProfile'                                                  , @('Out-PowerShellLauncher', '', '8'))
-    ${MenuLevel_Launcher_CLIP++}  += , @($LineSpacing, '5' , '-Command'                                                    , @('Out-PowerShellLauncher', '', '8'))
-    ${MenuLevel_Launcher_CLIP++}  += , @($LineSpacing, '6' , '-WindowStyle Hidden'                                         , @('Out-PowerShellLauncher', '', '8'))
-    ${MenuLevel_Launcher_CLIP++}  += , @($LineSpacing, '7' , '-ExecutionPolicy Bypass'                                     , @('Out-PowerShellLauncher', '', '8'))
-    ${MenuLevel_Launcher_CLIP++}  += , @($LineSpacing, '8' , '-Wow64 (to path 32-bit powershell.exe)'                      , @('Out-PowerShellLauncher', '', '8'))
+    ${MenuLevel_Launcher_CLIP++}    =   @()
+    ${MenuLevel_Launcher_CLIP++}   += , @('Enter string of numbers with all desired flags to pass to function. (e.g. 23459)', ''  , ''   , @('', '', ''))
+    ${MenuLevel_Launcher_CLIP++}   += , @($LineSpacing, '0' , 'NO EXECUTION FLAGS'                                          , @('Out-PowerShellLauncher', '', '8'))
+    ${MenuLevel_Launcher_CLIP++}   += , @($LineSpacing, '1' , '-NoExit'                                                     , @('Out-PowerShellLauncher', '', '8'))
+    ${MenuLevel_Launcher_CLIP++}   += , @($LineSpacing, '2' , '-NonInteractive'                                             , @('Out-PowerShellLauncher', '', '8'))
+    ${MenuLevel_Launcher_CLIP++}   += , @($LineSpacing, '3' , '-NoLogo'                                                     , @('Out-PowerShellLauncher', '', '8'))
+    ${MenuLevel_Launcher_CLIP++}   += , @($LineSpacing, '4' , '-NoProfile'                                                  , @('Out-PowerShellLauncher', '', '8'))
+    ${MenuLevel_Launcher_CLIP++}   += , @($LineSpacing, '5' , '-Command'                                                    , @('Out-PowerShellLauncher', '', '8'))
+    ${MenuLevel_Launcher_CLIP++}   += , @($LineSpacing, '6' , '-WindowStyle Hidden'                                         , @('Out-PowerShellLauncher', '', '8'))
+    ${MenuLevel_Launcher_CLIP++}   += , @($LineSpacing, '7' , '-ExecutionPolicy Bypass'                                     , @('Out-PowerShellLauncher', '', '8'))
+    ${MenuLevel_Launcher_CLIP++}   += , @($LineSpacing, '8' , '-Wow64 (to path 32-bit powershell.exe)'                      , @('Out-PowerShellLauncher', '', '8'))
 
     # Input options to display non-interactive menus or perform actions.
     $TutorialInputOptions         = @(@('tutorial')                            , "<Tutorial> of how to use this tool        `t")
@@ -710,14 +711,14 @@ http://www.danielbohannon.com
                         # Overload above arguments if $OverrideAcceptableInput is $TRUE, and extract $Function from $BreadCrumb
                         Switch($BreadCrumb.ToLower())
                         {
-                            '\launcher\ps'      {$Function = 'Out-PowerShellLauncher'; $ObfLevel = 1}
-                            '\launcher\cmd'     {$Function = 'Out-PowerShellLauncher'; $ObfLevel = 2}
-                            '\launcher\var+'    {$Function = 'Out-PowerShellLauncher'; $ObfLevel = 3}
-                            '\launcher\stdin+'  {$Function = 'Out-PowerShellLauncher'; $ObfLevel = 4}
-                            '\launcher\clip+'   {$Function = 'Out-PowerShellLauncher'; $ObfLevel = 5}
-                            '\launcher\var++'   {$Function = 'Out-PowerShellLauncher'; $ObfLevel = 6}
-                            '\launcher\stdin++' {$Function = 'Out-PowerShellLauncher'; $ObfLevel = 7}
-                            '\launcher\clip++'  {$Function = 'Out-PowerShellLauncher'; $ObfLevel = 8}
+                            '\launcher\ps'       {$Function = 'Out-PowerShellLauncher'; $ObfLevel = 1}
+                            '\launcher\cmd'      {$Function = 'Out-PowerShellLauncher'; $ObfLevel = 2}
+                            '\launcher\var+'     {$Function = 'Out-PowerShellLauncher'; $ObfLevel = 3}
+                            '\launcher\stdin+'   {$Function = 'Out-PowerShellLauncher'; $ObfLevel = 4}
+                            '\launcher\clip+'    {$Function = 'Out-PowerShellLauncher'; $ObfLevel = 5}
+                            '\launcher\var++'    {$Function = 'Out-PowerShellLauncher'; $ObfLevel = 6}
+                            '\launcher\stdin++'  {$Function = 'Out-PowerShellLauncher'; $ObfLevel = 7}
+                            '\launcher\clip++'   {$Function = 'Out-PowerShellLauncher'; $ObfLevel = 8}
                             default {Write-Error "An invalid value ($($BreadCrumb.ToLower())) was passed to switch block for setting `$Function when `$OverrideAcceptableInput -eq `$TRUE."; Exit}
                         }
                         # Extract $ObfLevel from first element in array (in case 0th element is used for informational purposes), and extract $Token from $BreadCrumb.
@@ -726,7 +727,10 @@ http://www.danielbohannon.com
                     }
                     
                     # Convert ObfuscatedCommand (string) to ScriptBlock for next obfuscation function.
-                    $ObfCommandScriptBlock = $ExecutionContext.InvokeCommand.NewScriptBlock($Script:ObfuscatedCommand)
+                    If(!($Script:LauncherApplied))
+                    {
+                        $ObfCommandScriptBlock = $ExecutionContext.InvokeCommand.NewScriptBlock($Script:ObfuscatedCommand)
+                    }
                     
                     # Validate that user has set SCRIPTPATH or SCRIPTBLOCK (by seeing if $Script:ObfuscatedCommand is empty).
                     If($Script:ObfuscatedCommand -eq '')
@@ -868,6 +872,21 @@ http://www.danielbohannon.com
                                 $CmdToPrint = @("Out-SecureStringCommand -ScriptBlock "," -PassThru")
                             }
                         }
+                        'Out-EncodedBXORCommand'       {
+                            If($Script:LauncherApplied)
+                            {
+                                Write-Host "`n`nERROR:" -NoNewLine -ForegroundColor Red
+                                Write-Host ' You cannot obfuscate after applying a Launcher to ObfuscatedCommand.' -NoNewLine
+                                Write-Host "`n       Enter" -NoNewLine
+                                Write-Host ' RESET' -NoNewLine -ForegroundColor Yellow
+                                Write-Host " to remove obfuscation from ObfuscatedCommand.`n" -NoNewLine
+                            }
+                            Else
+                            {
+                                $Script:ObfuscatedCommand = Out-EncodedBXORCommand      -ScriptBlock $ObfCommandScriptBlock -PassThru
+                                $CmdToPrint = @("Out-EncodedBXORCommand -ScriptBlock "," -PassThru")
+                            }
+                        }
                         'Out-PowerShellLauncher'        {
                             If($Script:LauncherApplied)
                             {
@@ -892,17 +911,17 @@ http://www.danielbohannon.com
                                     $SwitchesToPrint = @()
                                     ForEach($Value in $SwitchesAsStringArray)
                                     {
+
                                         Switch($Value)
                                         {
                                             1 {$SwitchesToPrint += '-NoExit'}
                                             2 {$SwitchesToPrint += '-NonInteractive'}
                                             3 {$SwitchesToPrint += '-NoLogo'}
                                             4 {$SwitchesToPrint += '-NoProfile'}
-                                            5 {If(!$HasWindowStyle) {$SwitchesToPrint += '-WindowStyle Hidden'   ; $HasWindowStyle = $TRUE}}
-                                            6 {If(!$HasWindowStyle) {$SwitchesToPrint += '-WindowStyle Minimized'; $HasWindowStyle = $TRUE}}
-                                            7 {If(!$HasWindowStyle) {$SwitchesToPrint += '-WindowStyle Normal'   ; $HasWindowStyle = $TRUE}}
-                                            8 {If(!$HasWindowStyle) {$SwitchesToPrint += '-WindowStyle Maximized'; $HasWindowStyle = $TRUE}}
-                                            9 {$SwitchesToPrint += '-Wow64'}
+                                            5 {$SwitchesToPrint += '-Command'}
+                                            6 {If(!$HasWindowStyle) {$SwitchesToPrint += '-WindowStyle Hidden'; $HasWindowStyle = $TRUE}}
+                                            7 {$SwitchesToPrint += '-ExecutionPolicy Bypass'}
+                                            8 {$SwitchesToPrint += '-Wow64'}
                                             default {Write-Error "An invalid `$SwitchesAsString value ($Value) was passed to switch block."; Exit;}
                                         }
                                     }
@@ -927,7 +946,7 @@ http://www.danielbohannon.com
                     {
                         # Add execution syntax to $Script:ExecutionCommands to maintain a history of commands to arrive at current obfuscated command.
                         $Script:ExecutionCommands += ($CmdToPrint[0] + '$ScriptBlock' + $CmdToPrint[1] + ';')
-                        
+
                         # Output syntax of command we executed in above Switch block.
                         Write-Host "`nExecuted:`t"
                         Write-Host $CmdToPrint[0] -NoNewLine -ForegroundColor Cyan
@@ -1631,7 +1650,7 @@ http://www.danielbohannon.com
     Write-Host "`tTwitter :: @danielhbohannon" -ForegroundColor Magenta
     Write-Host "`tBlog    :: http://danielbohannon.com" -ForegroundColor Magenta
     Write-Host "`tGithub  :: https://github.com/danielbohannon/Invoke-Obfuscation" -ForegroundColor Magenta
-    Write-Host "`tVersion :: 1.3" -ForegroundColor Magenta
+    Write-Host "`tVersion :: 1.4" -ForegroundColor Magenta
     Write-Host "`tLicense :: Apache License, Version 2.0" -ForegroundColor Magenta
     Write-Host "`tNotes   :: If(!`$Caffeinated) {Exit}" -ForegroundColor Magenta
 }

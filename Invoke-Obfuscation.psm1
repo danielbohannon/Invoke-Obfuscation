@@ -57,6 +57,7 @@ $RequiredFunctions += 'Out-EncodedHexCommand'
 $RequiredFunctions += 'Out-EncodedOctalCommand'
 $RequiredFunctions += 'Out-EncodedBinaryCommand'
 $RequiredFunctions += 'Out-SecureStringCommand'
+$RequiredFunctions += 'Out-EncodedBXORCommand'
 $RequiredFunctions += 'Out-PowerShellLauncher'
 $RequiredFunctions += 'Invoke-Obfuscation'
 
