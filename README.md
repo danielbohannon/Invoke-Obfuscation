@@ -81,9 +81,12 @@ v1.3 - 2016-10-22 Hacktivity, Budapest: Added two new LAUNCHERs: CLIP+ and CLIP+
 Also added additional (and simpler) array char conversion syntax for all ENCODING 
 functions that does not require For-EachObject/%.
 
-v1.4 - 2016-10-28 BruCON, Gent: Added new BXOR ENCODING function. Also enhanced 
+v1.4 - 2016-10-28 BruCON, Ghent: Added new BXOR ENCODING function. Also enhanced 
 randomized case for all components of all ENCODING functions as well as for 
 PowerShell execution flags for all LAUNCHERs. Finally, added -EP shorthand option 
 for -ExecutionPolicy to all LAUNCHERs as well as the optional integer representation 
 of the -WindowStyle PowerShell execution flag: Normal (0), Hidden (1), Minimized (2), 
 Maximized (3).
+
+v1.5 - 2016-11-04 BlueHat: Added WMIC LAUNCHER with some randomization of WMIC 
+command line arguments.
