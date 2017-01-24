@@ -1,6 +1,6 @@
-#    This file is part of Invoke-Obfuscation.
+#   This file is part of Invoke-Obfuscation.
 #
-#   Copyright 2016 Daniel Bohannon <@danielhbohannon>
+#   Copyright 2017 Daniel Bohannon <@danielhbohannon>
 #         while at Mandiant <http://www.mandiant.com>
 #
 #   Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,6 +14,16 @@
 #   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 #   See the License for the specific language governing permissions and
 #   limitations under the License.
+
+
+
+# Get location of this script no matter what the current directory is for the process executing this script.
+$ScriptDir = [System.IO.Path]::GetDirectoryName($myInvocation.MyCommand.Definition)
+
+Write-Host "`n[*] Invoke-Obfuscation.psm1 has been decomissioned." -ForegroundColor Red
+Write-Host "[*] Please run" -NoNewLine -ForegroundColor Red
+Write-Host " Import-Module $ScriptDir\Invoke-Obfuscation.psd1 " -NoNewLine -ForegroundColor Yellow
+Write-Host "instead." -ForegroundColor Red
 
 
 
@@ -45,7 +55,7 @@ This is a personal project developed by Daniel Bohannon while an employee at MAN
 
 http://www.danielbohannon.com
 #>
-
+<#
 # Confirm all necessary commands are loaded and import appropriate .ps1 files in current directory if necessary.
 Write-Host "`n[*] Validating necessary commands are loaded into current PowerShell session.`n"
 
@@ -116,3 +126,4 @@ Else
     Start-Sleep -Milliseconds 500
     Write-Host "`n"
 }
+#>

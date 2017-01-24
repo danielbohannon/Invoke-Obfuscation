@@ -1,4 +1,4 @@
-Invoke-Obfuscation v1.3
+Invoke-Obfuscation v1.6
 ===============
 
 Introduction
@@ -59,7 +59,7 @@ or feature requests through Github's bug tracker associated with this project.
 
 To install:
 
-	Import-Module ./Invoke-Obfuscation.psm1
+	Import-Module ./Invoke-Obfuscation.psd1
 	Invoke-Obfuscation
 
 License
@@ -88,5 +88,53 @@ for -ExecutionPolicy to all LAUNCHERs as well as the optional integer representa
 of the -WindowStyle PowerShell execution flag: Normal (0), Hidden (1), Minimized (2), 
 Maximized (3).
 
-v1.5 - 2016-11-04 BlueHat: Added WMIC LAUNCHER with some randomization of WMIC 
-command line arguments.
+v1.5 - 2016-11-04 Blue Hat (Redmond, Washington USA): Added WMIC LAUNCHER with some 
+randomization of WMIC command line arguments.
+
+v1.6 - 2017-01-24 Blue Hat IL (Tel Aviv, Israel):
+- Added CLI functionality:
+E.g., Invoke-Obfuscation -ScriptBlock {Write-Host 'CLI FTW!'} -Command 'Token\All\1,
+Encoding\1,Launcher\Stdin++\234,Clip' -Quiet -NoExit
+- Added UNDO functionality to remove one layer of obfuscation at a time.
+- Removed Whitespace obfuscation from Token\All\1 to speed up large script obfuscation.
+- Added Process Argument Tree output for all launchers to aid defenders.
+- Added base menu auto-detect functionality to avoid needing to use BACK or HOME:
+E.g., if you ran TOKEN then ALL then 1, then just type LAUNCHER and you will get to 
+the LAUNCHER menu without needing to type HOME or BACK to get back to the home menu.
+- Added multi-command syntax utilized by CLI and interactive mode:
+E.g., Token\All\1,String\3,Encoding\5,Launcher\Ps\234,Clip
+- Added regex capability to all menu and obfuscation commands:
+E.g., Token\*\*,String\[13],Encoding\(1|6),Launcher\.*[+]{2}\234,Clip
+- Added OUT FILEPATH single command functionality.
+- Added decoding if powershell -enc syntax is entered as a SCRIPTBLOCK value.
+- Added alias ForEach to ForEach-Object/% randomized syntax options in all ENCODING 
+functions.
+- Added -Key -Ke -K KEY substring syntax options to Out-SecureStringCommand.ps1.
+- Added more thorough case randomization to all \Home\String obfuscation functions.
+- Added -ST/-STA (Single-Threaded Apartment) flags to CLIP+ and CLIP++ launcher 
+functions since they are required if running on PowerShell 2.0.
+- Added Get-Item/GI/Item syntax everywhere where Get-ChildItem is used to get 
+variable values.
+- Added Set-Item variable instantiation syntax to TYPE obfuscation function.
+- Added additional Invoke-Expression/IEX syntax using PowerShell automatic variables 
+and environment variable value concatenations in Out-ObfuscatedStringCommand.ps1's 
+Out-EncapsulatedInvokeExpression function and copied to all launchers, STRING and 
+ENCODING functions to add numerous command-line syntaxes for IEX.
+- Added two new JOIN syntaxes for String\Reverse and all ENCODING obfuscation options:
+1) Added [String]::Join('',$string) JOIN syntax
+2) Added OFS-variable JOIN syntax (Output Field Separator automatic variable)
+- Added two more SecureString syntaxes to Encoding\5:
+1) PtrToStringAnsi / SecureStringToGlobalAllocAnsi
+2) PtrToStringBSTR / SecureStringToBSTR
+- Added six GetMember alternate syntaxes for several SecureString members:
+1) PtrToStringAuto, ([Runtime.InteropServices.Marshal].GetMembers()[3].Name).Invoke
+2) PtrToStringAuto, ([Runtime.InteropServices.Marshal].GetMembers()[5].Name).Invoke
+3) PtrToStringUni , ([Runtime.InteropServices.Marshal].GetMembers()[2].Name).Invoke
+4) PtrToStringUni , ([Runtime.InteropServices.Marshal].GetMembers()[4].Name).Invoke
+5) PtrToStringAnsi, ([Runtime.InteropServices.Marshal].GetMembers()[0].Name).Invoke
+6) PtrToStringAnsi, ([Runtime.InteropServices.Marshal].GetMembers()[1].Name).Invoke
+- Updated Out-ObfuscatedTokenCommand.ps1 so that VARIABLE obfuscation won't 
+encapsulate variables in ${} if they are already encapsulated (so ${${var}} won't 
+happen as this causes errors).
+- Replaced Invoke-Obfuscation.psm1 with Invoke-Obfuscation.psd1 (thanks @Carlos_Perez).
+- Fixed several TOKEN-level obfuscation bugs reported by @cobbr_io and @IISResetMe.
