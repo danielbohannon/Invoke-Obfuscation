@@ -1,6 +1,8 @@
 Invoke-Obfuscation v1.6
 ===============
 
+![Invoke-Obfuscation Screenshot](https://github.com/danielbohannon/danielbohannon.github.io/blob/master/Invoke-Obfuscation%20Screenshot.png)
+
 Introduction
 ------------
 Invoke-Obfuscation is a PowerShell v2.0+ compatible PowerShell command
