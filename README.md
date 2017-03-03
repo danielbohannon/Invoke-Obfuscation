@@ -143,4 +143,4 @@ happen as this causes errors).
 
 v1.7 - 2017-03-03 nullcon (Goa, India):
 - Added 3 new LAUNCHERs: RUNDLL, RUNDLL++ and MSHTA++
-- Added additional ExecutionContext wildcard variable strings (E*t, *cut*t, etc.)
+- Added additional ExecutionContext wildcard variable strings
