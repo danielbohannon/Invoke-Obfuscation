@@ -1,4 +1,4 @@
-Invoke-Obfuscation v1.6
+Invoke-Obfuscation v1.7
 ===============
 
 ![Invoke-Obfuscation Screenshot](https://github.com/danielbohannon/danielbohannon.github.io/blob/master/Invoke-Obfuscation%20Screenshot.png)
@@ -140,3 +140,7 @@ encapsulate variables in ${} if they are already encapsulated (so ${${var}} won'
 happen as this causes errors).
 - Replaced Invoke-Obfuscation.psm1 with Invoke-Obfuscation.psd1 (thanks @Carlos_Perez).
 - Fixed several TOKEN-level obfuscation bugs reported by @cobbr_io and @IISResetMe.
+
+v1.7 - 2017-03-03 nullcon (Goa, India):
+- Added 3 new LAUNCHERs: RUNDLL, RUNDLL++ and MSHTA++
+- Added additional ExecutionContext wildcard variable strings (E*t, *cut*t, etc.)
