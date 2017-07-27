@@ -252,6 +252,8 @@ http://www.danielbohannon.com
     $MenuLevel_Encoding             += , @($LineSpacing, '4' , "`tEncode entire command as <Binary>"                               , @('Out-EncodedBinaryCommand'          , '', ''))
     $MenuLevel_Encoding             += , @($LineSpacing, '5' , "`tEncrypt entire command as <SecureString> (AES)"                  , @('Out-SecureStringCommand'           , '', ''))
     $MenuLevel_Encoding             += , @($LineSpacing, '6' , "`tEncode entire command as <BXOR>"                                 , @('Out-EncodedBXORCommand'            , '', ''))
+    $MenuLevel_Encoding             += , @($LineSpacing, '7' , "`tEncode entire command as <Special Characters>"                   , @('Out-EncodedSpecialCharOnlyCommand' , '', ''))
+    $MenuLevel_Encoding             += , @($LineSpacing, '8' , "`tEncode entire command as <Whitespace>"                           , @('Out-EncodedWhitespaceCommand'      , '', ''))
 
     # Main\Launcher Menu.
     $MenuLevel_Launcher              =   @()
@@ -1189,6 +1191,14 @@ http://www.danielbohannon.com
                                 $Script:ObfuscatedCommand = Out-EncodedBXORCommand            -ScriptBlock $ObfCommandScriptBlock -PassThru
                                 $CmdToPrint = @("Out-EncodedBXORCommand -ScriptBlock "," -PassThru")
                             }
+                            'Out-EncodedSpecialCharOnlyCommand' {
+                                $Script:ObfuscatedCommand = Out-EncodedSpecialCharOnlyCommand -ScriptBlock $ObfCommandScriptBlock -PassThru
+                                $CmdToPrint = @("Out-EncodedSpecialCharOnlyCommand -ScriptBlock "," -PassThru")
+                            }
+                            'Out-EncodedWhitespaceCommand' {
+                                $Script:ObfuscatedCommand = Out-EncodedWhitespaceCommand      -ScriptBlock $ObfCommandScriptBlock -PassThru
+                                $CmdToPrint = @("Out-EncodedWhitespaceCommand -ScriptBlock "," -PassThru")
+                            }
                             'Out-PowerShellLauncher'            {
                                 # Extract numbers from string so we can output proper flag syntax in ExecutionCommands history.
                                 $SwitchesAsStringArray = [char[]]$Token | Sort-Object -Unique | Where-Object {$_ -ne ' '}
@@ -2092,7 +2102,7 @@ http://www.danielbohannon.com
     Write-Host "`tTwitter :: @danielhbohannon" -ForegroundColor Magenta
     Write-Host "`tBlog    :: http://danielbohannon.com" -ForegroundColor Magenta
     Write-Host "`tGithub  :: https://github.com/danielbohannon/Invoke-Obfuscation" -ForegroundColor Magenta
-    Write-Host "`tVersion :: 1.7" -ForegroundColor Magenta
+    Write-Host "`tVersion :: 1.8" -ForegroundColor Magenta
     Write-Host "`tLicense :: Apache License, Version 2.0" -ForegroundColor Magenta
     Write-Host "`tNotes   :: If(!`$Caffeinated) {Exit}" -ForegroundColor Magenta
 }
