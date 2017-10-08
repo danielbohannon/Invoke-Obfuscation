@@ -483,7 +483,6 @@ http://www.danielbohannon.com
         
         If(($UserResponse -eq 'quit') -AND $CliWasSpecified -AND !$NoExitWasSpecified)
         {
-            Write-Host "`n`nOutputting ObfuscatedCommand to stdout and exiting since -Command was specified and -NoExit was not specified:`n"
             Write-Output $Script:ObfuscatedCommand.Trim("`n")
             $UserInput = 'quit'
         }
