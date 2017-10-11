@@ -1420,7 +1420,7 @@ http://www.danielbohannon.com
                         Write-Host "`nSuccessfully output ObfuscatedCommand to" -NoNewLine -ForegroundColor Cyan
                         Write-Host " $OutputFilePath" -NoNewLine -ForegroundColor Yellow
                         Write-Host ".`nA Launcher has been applied so this script cannot be run as a standalone .ps1 file." -ForegroundColor Cyan
-C:\Windows\Notepad.exe $OutputFilePath
+                        If($Env:windir) { C:\Windows\Notepad.exe $OutputFilePath }
                     }
                     ElseIf(!$Script:LauncherApplied -AND (Test-Path $OutputFilePath))
                     {
@@ -1428,7 +1428,7 @@ C:\Windows\Notepad.exe $OutputFilePath
                         Write-Host "`nSuccessfully output ObfuscatedCommand to" -NoNewLine -ForegroundColor Cyan
                         Write-Host " $OutputFilePath" -NoNewLine -ForegroundColor Yellow
                         Write-Host "." -ForegroundColor Cyan
-C:\Windows\Notepad.exe $OutputFilePath
+                        If($Env:windir) { C:\Windows\Notepad.exe $OutputFilePath }
                     }
                     Else
                     {
