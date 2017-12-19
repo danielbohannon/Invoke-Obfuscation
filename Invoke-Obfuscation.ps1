@@ -173,6 +173,7 @@ http://www.danielbohannon.com
         If($PathTopsd1.Contains(' ')) {$PathTopsd1 = '"' + $PathTopsd1 + '"'}
         Write-Host "`n`nERROR: Invoke-Obfuscation module is not loaded. You must run:" -ForegroundColor Red
         Write-Host "       Import-Module $PathTopsd1`n`n" -ForegroundColor Yellow
+        Start-Sleep -Seconds 3
         Exit
     }
 
@@ -187,6 +188,7 @@ http://www.danielbohannon.com
     $MenuLevel+= , @($LineSpacing, 'TOKEN'    , 'Obfuscate PowerShell command <Tokens>')
     $MenuLevel+= , @($LineSpacing, 'STRING'   , 'Obfuscate entire command as a <String>')
     $MenuLevel+= , @($LineSpacing, 'ENCODING' , 'Obfuscate entire command via <Encoding>')
+    $MenuLevel+= , @($LineSpacing, 'COMPRESS' , 'Convert entire command to one-liner and <Compress>')
     $MenuLevel+= , @($LineSpacing, 'LAUNCHER' , 'Obfuscate command args w/<Launcher> techniques (run once at end)')
     
     # Main\Token Menu.
@@ -255,6 +257,10 @@ http://www.danielbohannon.com
     $MenuLevel_Encoding             += , @($LineSpacing, '7' , "`tEncode entire command as <Special Characters>"                   , @('Out-EncodedSpecialCharOnlyCommand' , '', ''))
     $MenuLevel_Encoding             += , @($LineSpacing, '8' , "`tEncode entire command as <Whitespace>"                           , @('Out-EncodedWhitespaceCommand'      , '', ''))
 
+    # Main\Compress Menu.
+    $MenuLevel_Compress              =   @()
+    $MenuLevel_Compress             += , @($LineSpacing, '1' , "Convert entire command to one-liner and <compress>"                , @('Out-CompressedCommand'             , '', ''))
+    
     # Main\Launcher Menu.
     $MenuLevel_Launcher              =   @()
     $MenuLevel_Launcher             += , @($LineSpacing, 'PS'            , "`t<PowerShell>")
@@ -1197,6 +1203,10 @@ http://www.danielbohannon.com
                             'Out-EncodedWhitespaceCommand' {
                                 $Script:ObfuscatedCommand = Out-EncodedWhitespaceCommand      -ScriptBlock $ObfCommandScriptBlock -PassThru
                                 $CmdToPrint = @("Out-EncodedWhitespaceCommand -ScriptBlock "," -PassThru")
+                            }
+                            'Out-CompressedCommand' {
+                                $Script:ObfuscatedCommand = Out-CompressedCommand             -ScriptBlock $ObfCommandScriptBlock -PassThru
+                                $CmdToPrint = @("Out-CompressedCommand -ScriptBlock "," -PassThru")
                             }
                             'Out-PowerShellLauncher'            {
                                 # Extract numbers from string so we can output proper flag syntax in ExecutionCommands history.
