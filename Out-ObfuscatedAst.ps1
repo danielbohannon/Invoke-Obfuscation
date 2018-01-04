@@ -7,7 +7,7 @@
     Obfuscates PowerShell scripts using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: none
     Optional Dependencies: Get-Ast
 
@@ -69,9 +69,7 @@
 
     .NOTES
 
-    Out-ObfuscatedAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     [CmdletBinding(DefaultParameterSetName = "ByString")] Param(
@@ -412,7 +410,7 @@ function Out-ObfuscatedAttributeBaseAst {
     Obfuscates a AttributeBaseAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedAttributeAst, Out-ObfuscatedTypeConstraintAst, Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -442,9 +440,9 @@ function Out-ObfuscatedAttributeBaseAst {
 
     .NOTES
 
-    Out-ObfuscatedAttributeBaseAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
+    Out-ObfuscatedAttributeBaseAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    
 
     #>
     Param (
@@ -487,7 +485,7 @@ function Out-ObfuscatedCatchClauseAst {
     Obfuscates a CatchClauseAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -517,9 +515,7 @@ function Out-ObfuscatedCatchClauseAst {
 
     .NOTES
 
-    Out-ObfuscatedAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -552,7 +548,7 @@ function Out-ObfuscatedCommandElementAst {
     Obfuscates a CommandElementAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedCommandParameterAst, Out-ObfuscatedExpressionAst, Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -582,9 +578,7 @@ function Out-ObfuscatedCommandElementAst {
 
     .NOTES
 
-    Out-ObfuscatedCommandElementAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedCommandElementAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -626,7 +620,7 @@ function Out-ObfuscatedMemberAst {
     Obfuscates a MemberAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -656,9 +650,7 @@ function Out-ObfuscatedMemberAst {
 
     .NOTES
 
-    Out-ObfuscatedMemberAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedMemberAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -691,7 +683,7 @@ function Out-ObfuscatedNamedAttributeArgumentAst {
     Obfuscates a NamedAttributeArgumentAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -721,9 +713,7 @@ function Out-ObfuscatedNamedAttributeArgumentAst {
 
     .NOTES
 
-    Out-ObfuscatedNamedAttributeArgumentAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedNamedAttributeArgumentAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -768,7 +758,7 @@ function Out-ObfuscatedNamedBlockAst {
     Obfuscates a NamedAttributeArgumentAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -798,9 +788,7 @@ function Out-ObfuscatedNamedBlockAst {
 
     .NOTES
 
-    Out-ObfuscatedNamedBlockAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedNamedBlockAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -833,7 +821,7 @@ function Out-ObfuscatedParamBlockAst {
     Obfuscates a ParamBlockAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedAstsReordered, Get-AstChildren
     Optional Dependencies: none
 
@@ -863,9 +851,7 @@ function Out-ObfuscatedParamBlockAst {
 
     .NOTES
 
-    Out-ObfuscatedParamBlockAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedParamBlockAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -909,7 +895,7 @@ function Out-ObfuscatedParameterAst {
     Obfuscates a ParameterAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedAstsReordered, Get-AstChildren
     Optional Dependencies: none
 
@@ -939,9 +925,7 @@ function Out-ObfuscatedParameterAst {
 
     .NOTES
 
-    Out-ObfuscatedParameterAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedParameterAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -974,7 +958,7 @@ function Out-ObfuscatedRedirectionAst {
     Obfuscates a RedirectionAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -1004,9 +988,7 @@ function Out-ObfuscatedRedirectionAst {
 
     .NOTES
 
-    Out-ObfuscatedRedirectionAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedRedirectionAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -1039,7 +1021,7 @@ function Out-ObfuscatedScriptBlockAst {
     Obfuscates a ScriptBlockAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst, Out-ObfuscatedAstsReordered, Out-ObfuscatedAst, Get-AstChildren
     Optional Dependencies: none
 
@@ -1069,9 +1051,7 @@ function Out-ObfuscatedScriptBlockAst {
 
     .NOTES
 
-    Out-ObfuscatedScriptBlockAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedScriptBlockAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -1138,7 +1118,7 @@ function Out-ObfuscatedStatementAst {
     Obfuscates a StatementAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -1168,9 +1148,7 @@ function Out-ObfuscatedStatementAst {
 
     .NOTES
 
-    Out-ObfuscatedStatementAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedStatementAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -1203,7 +1181,7 @@ function Out-ObfuscatedStatementBlockAst {
     Obfuscates a StatementBlockAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -1233,9 +1211,7 @@ function Out-ObfuscatedStatementBlockAst {
 
     .NOTES
 
-    Out-ObfuscatedStatementBlockAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedStatementBlockAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -1270,7 +1246,7 @@ function Out-ObfuscatedAttributeAst {
     Obfuscates a AttributeAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedAstsReordered
     Optional Dependencies: none
 
@@ -1300,9 +1276,7 @@ function Out-ObfuscatedAttributeAst {
 
     .NOTES
 
-    Out-ObfuscatedAttributeAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedAttributeAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -1360,7 +1334,7 @@ function Out-ObfuscatedTypeConstraintAst {
     Obfuscates a TypeConstraintAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -1390,9 +1364,7 @@ function Out-ObfuscatedTypeConstraintAst {
 
     .NOTES
 
-    Out-ObfuscatedTypeConstraintAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedTypeConstraintAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -1483,7 +1455,7 @@ function Out-ObfuscatedCommandParameterAst {
     Obfuscates a CommandParameterAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -1513,9 +1485,7 @@ function Out-ObfuscatedCommandParameterAst {
 
     .NOTES
 
-    Out-ObfuscatedCommandParameterAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedCommandParameterAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -1548,7 +1518,7 @@ function Out-ObfuscatedExpressionAst {
     Obfuscates a ExpressionAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedArrayExpressionAst, Out-ObfuscatedArrayLiteralAst, Out-ObfuscatedAttributedExpressionAst, Out-ObfuscatedBinaryExpressionAst, Out-ObfuscatedConstantExpressionAst, Out-ObfuscatedErrorExpressionAst, Out-ObfuscatedExpandedStringExpressionAst, Out-ObfuscatedHashtableAst, Out-ObfuscatedIndexExpressionAst, Out-ObfuscatedMemberExpressionAst, Out-ObfuscatedParenExpressionAst, Out-ObfuscatedScriptBlockExpressionAst, Out-ObfuscatedSubExpressionAst, Out-ObfuscatedTypeExpressionAst, Out-ObfuscatedUnaryExpressionAst, Out-ObfuscatedUsingExpressionAst, Out-ObfuscatedVariableExpressionAst, Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -1578,9 +1548,7 @@ function Out-ObfuscatedExpressionAst {
 
     .NOTES
 
-    Out-ObfuscatedExpressionAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedExpressionAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -1669,7 +1637,7 @@ function Out-ObfuscatedArrayExpressionAst {
     Obfuscates an ArrayExpressionAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -1699,9 +1667,7 @@ function Out-ObfuscatedArrayExpressionAst {
 
     .NOTES
 
-    Out-ObfuscatedArrayExpressionAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedArrayExpressionAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -1734,7 +1700,7 @@ function Out-ObfuscatedArrayLiteralAst {
     Obfuscates an ArrayLiteralAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -1764,9 +1730,7 @@ function Out-ObfuscatedArrayLiteralAst {
 
     .NOTES
 
-    Out-ObfuscatedArrayLiteralAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedArrayLiteralAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -1799,7 +1763,7 @@ function Out-ObfuscatedAttributedExpressionAst {
     Obfuscates an AttributedExpressionAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedArrayExpressionAst, Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -1829,9 +1793,7 @@ function Out-ObfuscatedAttributedExpressionAst {
 
     .NOTES
 
-    Out-ObfuscatedAttributedExpressionAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedAttributedExpressionAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -1869,7 +1831,7 @@ function Out-ObfuscatedBinaryExpressionAst {
     Obfuscates a BinaryExpressionAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Test-ExpressionAstIsNumeric, Out-ObfuscatedAst, Out-ParenthesizedString, Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -1899,9 +1861,7 @@ function Out-ObfuscatedBinaryExpressionAst {
 
     .NOTES
 
-    Out-ObfuscatedBinaryExpressionAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedBinaryExpressionAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -1963,7 +1923,7 @@ function Out-ObfuscatedConstantExpressionAst {
     Obfuscates a ConstantExpressionAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -1993,9 +1953,7 @@ function Out-ObfuscatedConstantExpressionAst {
 
     .NOTES
 
-    Out-ObfuscatedConstantExpressionAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedConstantExpressionAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -2028,7 +1986,7 @@ function Out-ObfuscatedErrorExpressionAst {
     Obfuscates a ErrorExpressionAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -2058,9 +2016,7 @@ function Out-ObfuscatedErrorExpressionAst {
 
     .NOTES
 
-    Out-ObfuscatedErrorExpressionAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedErrorExpressionAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -2093,7 +2049,7 @@ function Out-ObfuscatedExpandableStringExpressionAst {
     Obfuscates an ExpandableStringExpressionAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -2123,9 +2079,7 @@ function Out-ObfuscatedExpandableStringExpressionAst {
 
     .NOTES
 
-    Out-ObfuscatedExpandableStringExpressionAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedExpandableStringExpressionAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -2158,7 +2112,7 @@ function Out-ObfuscatedHashtableAst {
     Obfuscates a HashtableAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedAst
     Optional Dependencies: none
 
@@ -2188,9 +2142,7 @@ function Out-ObfuscatedHashtableAst {
 
     .NOTES
 
-    Out-ObfuscatedHashtableAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedHashtableAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -2251,7 +2203,7 @@ function Out-ObfuscatedIndexExpressionAst {
     Obfuscates a IndexExpressionAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -2281,9 +2233,7 @@ function Out-ObfuscatedIndexExpressionAst {
 
     .NOTES
 
-    Out-ObfuscatedIndexExpressionAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedIndexExpressionAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -2316,7 +2266,7 @@ function Out-ObfuscatedMemberExpressionAst {
     Obfuscates a MemberExpressionAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -2346,9 +2296,7 @@ function Out-ObfuscatedMemberExpressionAst {
 
     .NOTES
 
-    Out-ObfuscatedMemberExpressionAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedMemberExpressionAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -2381,7 +2329,7 @@ function Out-ObfuscatedParenExpressionAst {
     Obfuscates a ParenExpressionAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -2411,9 +2359,7 @@ function Out-ObfuscatedParenExpressionAst {
 
     .NOTES
 
-    Out-ObfuscatedParenExpressionAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedParenExpressionAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -2446,7 +2392,7 @@ function Out-ObfuscatedScriptBlockExpressionAst {
     Obfuscates a ScriptBlockExpressionAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -2476,9 +2422,7 @@ function Out-ObfuscatedScriptBlockExpressionAst {
 
     .NOTES
 
-    Out-ObfuscatedScriptBlockExpressionAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedScriptBlockExpressionAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -2511,7 +2455,7 @@ function Out-ObfuscatedSubExpressionAst {
     Obfuscates a SubExpressionAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -2541,9 +2485,7 @@ function Out-ObfuscatedSubExpressionAst {
 
     .NOTES
 
-    Out-ObfuscatedSubExpressionAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedSubExpressionAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -2576,7 +2518,7 @@ function Out-ObfuscatedTypeExpressionAst {
     Obfuscates a TypeExpressionAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -2606,9 +2548,7 @@ function Out-ObfuscatedTypeExpressionAst {
 
     .NOTES
 
-    Out-ObfuscatedTypeExpressionAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedTypeExpressionAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -2696,7 +2636,7 @@ function Out-ObfuscatedUnaryExpressionAst {
     Obfuscates a UnaryExpressionAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -2726,9 +2666,7 @@ function Out-ObfuscatedUnaryExpressionAst {
 
     .NOTES
 
-    Out-ObfuscatedUnaryExpressionAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedUnaryExpressionAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -2761,7 +2699,7 @@ function Out-ObfuscatedUsingExpressionAst {
     Obfuscates a UnaryExpressionAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -2791,9 +2729,7 @@ function Out-ObfuscatedUsingExpressionAst {
 
     .NOTES
 
-    Out-ObfuscatedUsingExpressionAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedUsingExpressionAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -2826,7 +2762,7 @@ function Out-ObfuscatedVariableExpressionAst {
     Obfuscates a VariableExpressionAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -2856,9 +2792,7 @@ function Out-ObfuscatedVariableExpressionAst {
 
     .NOTES
 
-    Out-ObfuscatedVariableExpressionAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedVariableExpressionAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -2893,7 +2827,7 @@ function Out-ObfuscatedConvertExpressionAst {
     Obfuscates a ConvertExpressionAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -2923,9 +2857,7 @@ function Out-ObfuscatedConvertExpressionAst {
 
     .NOTES
 
-    Out-ObfuscatedConvertExpressionAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedConvertExpressionAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -2960,7 +2892,7 @@ function Out-ObfuscatedStringConstantExpressionAst {
     Obfuscates a StringConstantExpressionAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -2990,9 +2922,7 @@ function Out-ObfuscatedStringConstantExpressionAst {
 
     .NOTES
 
-    Out-ObfuscatedStringConstantExpressionAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedStringConstantExpressionAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -3027,7 +2957,7 @@ function Out-ObfuscatedInvokeMemberExpressionAst {
     Obfuscates a InvokeMemberExpressionAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -3057,9 +2987,7 @@ function Out-ObfuscatedInvokeMemberExpressionAst {
 
     .NOTES
 
-    Out-ObfuscatedInvokeMemberExpressionAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedInvokeMemberExpressionAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -3094,7 +3022,7 @@ function Out-ObfuscatedBaseCtorInvokeMemberExpressionAst {
     Obfuscates a BaseCtorInvokeMemberExpressionAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -3124,9 +3052,7 @@ function Out-ObfuscatedBaseCtorInvokeMemberExpressionAst {
 
     .NOTES
 
-    Out-ObfuscatedBaseCtorInvokeMemberExpressionAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedBaseCtorInvokeMemberExpressionAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -3161,7 +3087,7 @@ function Out-ObfuscatedFunctionMemberAst {
     Obfuscates a FunctionMemberAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -3191,9 +3117,7 @@ function Out-ObfuscatedFunctionMemberAst {
 
     .NOTES
 
-    Out-ObfuscatedFunctionMemberAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedFunctionMemberAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -3226,7 +3150,7 @@ function Out-ObfuscatedPropertyMemberAst {
     Obfuscates a PropertyMemberAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -3256,9 +3180,7 @@ function Out-ObfuscatedPropertyMemberAst {
 
     .NOTES
 
-    Out-ObfuscatedPropertyMemberAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedPropertyMemberAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -3293,7 +3215,7 @@ function Out-ObfuscatedFileRedirectionAst {
     Obfuscates a FileRedirectionAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -3323,9 +3245,7 @@ function Out-ObfuscatedFileRedirectionAst {
 
     .NOTES
 
-    Out-ObfuscatedFileRedirectionAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedFileRedirectionAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -3358,7 +3278,7 @@ function Out-ObfuscatedMergingRedirectionAst {
     Obfuscates a MergingRedirectionAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -3388,9 +3308,7 @@ function Out-ObfuscatedMergingRedirectionAst {
 
     .NOTES
 
-    Out-ObfuscatedMergingRedirectionAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedMergingRedirectionAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -3425,7 +3343,7 @@ function Out-ObfuscatedBlockStatementAst {
     Obfuscates a BlockStatementAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -3455,9 +3373,7 @@ function Out-ObfuscatedBlockStatementAst {
 
     .NOTES
 
-    Out-ObfuscatedBlockStatementAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedBlockStatementAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -3490,7 +3406,7 @@ function Out-ObfuscatedBreakStatementAst {
     Obfuscates a BreakStatementAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -3520,9 +3436,7 @@ function Out-ObfuscatedBreakStatementAst {
 
     .NOTES
 
-    Out-ObfuscatedBreakStatementAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedBreakStatementAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -3555,7 +3469,7 @@ function Out-ObfuscatedCommandBaseAst {
     Obfuscates a CommandBaseAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -3585,9 +3499,7 @@ function Out-ObfuscatedCommandBaseAst {
 
     .NOTES
 
-    Out-ObfuscatedCommandBaseAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedCommandBaseAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -3620,7 +3532,7 @@ function Out-ObfuscatedConfigurationDefinitionAst {
     Obfuscates a ConfigurationDefinitionAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -3650,9 +3562,7 @@ function Out-ObfuscatedConfigurationDefinitionAst {
 
     .NOTES
 
-    Out-ObfuscatedConfigurationDefinitionAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedConfigurationDefinitionAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -3685,7 +3595,7 @@ function Out-ObfuscatedContinueStatementAst {
     Obfuscates a ContinueStatementAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -3715,9 +3625,7 @@ function Out-ObfuscatedContinueStatementAst {
 
     .NOTES
 
-    Out-ObfuscatedContinueStatementAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedContinueStatementAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -3750,7 +3658,7 @@ function Out-ObfuscatedDataStatementAst {
     Obfuscates a DataStatementAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -3780,9 +3688,7 @@ function Out-ObfuscatedDataStatementAst {
 
     .NOTES
 
-    Out-ObfuscatedDataStatementAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedDataStatementAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -3815,7 +3721,7 @@ function Out-ObfuscatedDynamicKeywordStatementAst {
     Obfuscates a DynamicKeywordStatementAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -3845,9 +3751,7 @@ function Out-ObfuscatedDynamicKeywordStatementAst {
 
     .NOTES
 
-    Out-ObfuscatedDynamicKeywordStatementAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedDynamicKeywordStatementAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -3880,7 +3784,7 @@ function Out-ObfuscatedExitStatementAst {
     Obfuscates a ExitStatementAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -3910,9 +3814,7 @@ function Out-ObfuscatedExitStatementAst {
 
     .NOTES
 
-    Out-ObfuscatedExitStatementAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedExitStatementAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -3945,7 +3847,7 @@ function Out-ObfuscatedFunctionDefinitionAst {
     Obfuscates a FunctionDefinitionAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -3975,9 +3877,7 @@ function Out-ObfuscatedFunctionDefinitionAst {
 
     .NOTES
 
-    Out-ObfuscatedFunctionDefinitionAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedFunctionDefinitionAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -4010,7 +3910,7 @@ function Out-ObfuscatedIfStatementAst {
     Obfuscates a IfStatementAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -4040,9 +3940,7 @@ function Out-ObfuscatedIfStatementAst {
 
     .NOTES
 
-    Out-ObfuscatedIfStatementAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedIfStatementAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -4075,7 +3973,7 @@ function Out-ObfuscatedLabeledStatementAst {
     Obfuscates a LabeledStatementAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -4105,9 +4003,7 @@ function Out-ObfuscatedLabeledStatementAst {
 
     .NOTES
 
-    Out-ObfuscatedLabeledStatementAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedLabeledStatementAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -4140,7 +4036,7 @@ function Out-ObfuscatedPipelineBaseAst {
     Obfuscates a PipelineBaseAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -4170,9 +4066,7 @@ function Out-ObfuscatedPipelineBaseAst {
 
     .NOTES
 
-    Out-ObfuscatedPipelineBaseAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedPipelineBaseAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -4205,7 +4099,7 @@ function Out-ObfuscatedReturnStatementAst {
     Obfuscates a ReturnStatementAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -4235,9 +4129,7 @@ function Out-ObfuscatedReturnStatementAst {
 
     .NOTES
 
-    Out-ObfuscatedReturnStatementAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedReturnStatementAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -4270,7 +4162,7 @@ function Out-ObfuscatedThrowStatementAst {
     Obfuscates a ThrowStatementAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -4300,9 +4192,7 @@ function Out-ObfuscatedThrowStatementAst {
 
     .NOTES
 
-    Out-ObfuscatedThrowStatementAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedThrowStatementAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -4335,7 +4225,7 @@ function Out-ObfuscatedTrapStatementAst {
     Obfuscates a TrapStatementAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -4365,9 +4255,7 @@ function Out-ObfuscatedTrapStatementAst {
 
     .NOTES
 
-    Out-ObfuscatedTrapStatementAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedTrapStatementAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -4400,7 +4288,7 @@ function Out-ObfuscatedTryStatementAst {
     Obfuscates a TryStatementAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -4430,9 +4318,7 @@ function Out-ObfuscatedTryStatementAst {
 
     .NOTES
 
-    Out-ObfuscatedTryStatementAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedTryStatementAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -4465,7 +4351,7 @@ function Out-ObfuscatedTypeDefinitionAst {
     Obfuscates a TypeDefinitionAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -4495,9 +4381,7 @@ function Out-ObfuscatedTypeDefinitionAst {
 
     .NOTES
 
-    Out-ObfuscatedTypeDefinitionAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedTypeDefinitionAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -4530,7 +4414,7 @@ function Out-ObfuscatedUsingStatementAst {
     Obfuscates a UsingStatementAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -4560,9 +4444,7 @@ function Out-ObfuscatedUsingStatementAst {
 
     .NOTES
 
-    Out-ObfuscatedUsingStatementAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedUsingStatementAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -4597,7 +4479,7 @@ function Out-ObfuscatedCommandAst {
     Obfuscates a CommandAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Get-AstChildren, Out-ObfuscatedAst, Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -4627,9 +4509,7 @@ function Out-ObfuscatedCommandAst {
 
     .NOTES
 
-    Out-ObfuscatedCommandAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedCommandAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -4714,7 +4594,7 @@ function Out-ObfuscatedCommandExpressionAst {
     Obfuscates a CommandExpressionAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -4744,9 +4624,7 @@ function Out-ObfuscatedCommandExpressionAst {
 
     .NOTES
 
-    Out-ObfuscatedCommandExpressionAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedCommandExpressionAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -4781,7 +4659,7 @@ function Out-ObfuscatedLoopStatementAst {
     Obfuscates a LoopStatementAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -4811,9 +4689,7 @@ function Out-ObfuscatedLoopStatementAst {
 
     .NOTES
 
-    Out-ObfuscatedLoopStatementAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedLoopStatementAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -4847,7 +4723,7 @@ function Out-ObfuscatedSwitchStatementAst {
     Obfuscates a SwitchStatementAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -4877,9 +4753,7 @@ function Out-ObfuscatedSwitchStatementAst {
 
     .NOTES
 
-    Out-ObfuscatedSwitchStatementAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedSwitchStatementAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -4914,7 +4788,7 @@ function Out-ObfuscatedDoUntilStatementAst {
     Obfuscates a DoUntilStatementAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -4944,9 +4818,7 @@ function Out-ObfuscatedDoUntilStatementAst {
 
     .NOTES
 
-    Out-ObfuscatedDoUntilStatementAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedDoUntilStatementAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -4979,7 +4851,7 @@ function Out-ObfuscatedDoWhileStatementAst {
     Obfuscates a DoWhileStatementAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -5009,9 +4881,7 @@ function Out-ObfuscatedDoWhileStatementAst {
 
     .NOTES
 
-    Out-ObfuscatedDoWhileStatementAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedDoWhileStatementAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -5044,7 +4914,7 @@ function Out-ObfuscatedForEachStatementAst {
     Obfuscates a ForEachStatementAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -5074,9 +4944,7 @@ function Out-ObfuscatedForEachStatementAst {
 
     .NOTES
 
-    Out-ObfuscatedForEachStatementAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedForEachStatementAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -5109,7 +4977,7 @@ function Out-ObfuscatedForStatementAst {
     Obfuscates a ForStatementAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -5139,9 +5007,7 @@ function Out-ObfuscatedForStatementAst {
 
     .NOTES
 
-    Out-ObfuscatedForStatementAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedForStatementAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -5174,7 +5040,7 @@ function Out-ObfuscatedWhileStatementAst {
     Obfuscates a WhileStatementAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -5204,9 +5070,7 @@ function Out-ObfuscatedWhileStatementAst {
 
     .NOTES
 
-    Out-ObfuscatedWhileStatementAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedWhileStatementAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -5241,7 +5105,7 @@ function Out-ObfuscatedAssignmentStatementAst {
     Obfuscates a AssignmentStatementAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedAst, Out-ParenthesizedString, Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -5271,9 +5135,7 @@ function Out-ObfuscatedAssignmentStatementAst {
 
     .NOTES
 
-    Out-ObfuscatedAssignmentStatementAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedAssignmentStatementAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -5402,7 +5264,7 @@ function Out-ObfuscatedErrorStatementAst {
     Obfuscates a ErrorStatementAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -5432,9 +5294,7 @@ function Out-ObfuscatedErrorStatementAst {
 
     .NOTES
 
-    Out-ObfuscatedErrorStatementAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedErrorStatementAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -5467,7 +5327,7 @@ function Out-ObfuscatedPipelineAst {
     Obfuscates a PipelineAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedChildrenAst
     Optional Dependencies: none
 
@@ -5497,9 +5357,7 @@ function Out-ObfuscatedPipelineAst {
 
     .NOTES
 
-    Out-ObfuscatedPipelineAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedPipelineAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -5535,7 +5393,7 @@ function Out-ObfuscatedAstsReordered {
     Obfuscates and re-orders ChildrenAsts inside of a ParentAst PipelineAst using AbstractSyntaxTree-based obfuscation rules.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedAst
     Optional Dependencies: none
 
@@ -5570,9 +5428,7 @@ function Out-ObfuscatedAstsReordered {
 
     .NOTES
 
-    Out-ObfuscatedAstsReordered is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedAstsReordered is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -5627,7 +5483,7 @@ function Out-ParenthesizedString {
     Outputs a string that is guaranteed to be surrounded in a single set of parentheses.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: none
     Optional Dependencies: none
 
@@ -5650,9 +5506,7 @@ function Out-ParenthesizedString {
 
     .NOTES
 
-    Out-ParenthesizedString is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ParenthesizedString is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param(
@@ -5689,7 +5543,7 @@ function Test-ExpressionAstIsNumeric {
     Recursively tests if an ExpressionAst is a numeric expression, and can be re-ordered.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: none
     Optional Dependencies: none
 
@@ -5711,9 +5565,7 @@ function Test-ExpressionAstIsNumeric {
 
     .NOTES
 
-    Test-ExpressionAstIsNumeric is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Test-ExpressionAstIsNumeric is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -5758,7 +5610,7 @@ function Get-AstChildren {
     Gets the children Asts of a given AbstractSyntaxTree.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: none
     Optional Dependencies: none
 
@@ -5781,9 +5633,7 @@ function Get-AstChildren {
 
     .NOTES
 
-    Get-AstChildren is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Get-AstChildren is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -5819,7 +5669,7 @@ function Out-ObfuscatedChildrenAst {
     Recursively obfuscates the ChildrenAsts of an Ast.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: Out-ObfuscatedAst
     Optional Dependencies: none
 
@@ -5853,9 +5703,7 @@ function Out-ObfuscatedChildrenAst {
 
     .NOTES
 
-    Out-ObfuscatedChildrenAst is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Out-ObfuscatedChildrenAst is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     Param (
@@ -5911,7 +5759,7 @@ function Get-Ast {
     Gets the root Ast for a given script.
 
     Author: Ryan Cobb (@cobbr_io)
-    License: GNU GPLv3
+    License: Apache License, Version 2.0
     Required Dependecies: none
     Optional Dependencies: none
 
@@ -5965,9 +5813,7 @@ function Get-Ast {
 
     .NOTES
 
-    Get-Ast is a part of PSAmsi, a tool for auditing and defeating AMSI signatures.
-
-    PSAmsi is located at https://github.com/cobbr/PSAmsi. Additional information can be found at https://cobbr.io.
+    Get-Ast is a part of Invoke-Obfuscation. Invoke-Obfuscation can be found at https://github.com/danielbohannon/Invoke-Obfuscation.
 
     #>
     [CmdletBinding(DefaultParameterSetName = "ByString")] Param(
