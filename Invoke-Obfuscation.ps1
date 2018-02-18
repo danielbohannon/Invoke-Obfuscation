@@ -84,7 +84,7 @@ http://www.danielbohannon.com
         [ScriptBlock]
         $ScriptBlock,
 
-        [Parameter(Position = 0, ParameterSetName = 'ScriptBlock')]
+        [Parameter(Position = 0, ParameterSetName = 'ScriptPath')]
         [ValidateNotNullOrEmpty()]
         [String]
         $ScriptPath,
