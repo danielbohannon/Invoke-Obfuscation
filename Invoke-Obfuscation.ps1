@@ -1494,7 +1494,7 @@ http://www.danielbohannon.com
                     }
                     
                     # Write ObfuscatedCommand out to disk.
-                    $Script:ObfuscatedCommand | Out-File $OutputFilePath
+                    $Script:ObfuscatedCommand | Out-File $OutputFilePath -Encoding ASCII
 
                     If($Script:LauncherApplied -AND (Test-Path $OutputFilePath))
                     {
