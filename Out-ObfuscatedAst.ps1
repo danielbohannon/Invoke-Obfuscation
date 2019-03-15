@@ -280,8 +280,8 @@
                 Else { Out-ObfuscatedMemberExpressionAst -Ast $AbstractSyntaxTree -AstTypesToObfuscate $AstTypesToObfuscate }
             }
             "MergingRedirectionAst" {
-                If ($DisableNestedObfuscation) { Out-ObfuscatedMergingRedirectionAstt -Ast $AbstractSyntaxTree -AstTypesToObfuscate $AstTypesToObfuscate -DisableNestedObfuscation }
-                Else { Out-ObfuscatedMergingRedirectionAstt -Ast $AbstractSyntaxTree -AstTypesToObfuscate $AstTypesToObfuscate }
+                If ($DisableNestedObfuscation) { Out-ObfuscatedMergingRedirectionAst -Ast $AbstractSyntaxTree -AstTypesToObfuscate $AstTypesToObfuscate -DisableNestedObfuscation }
+                Else { Out-ObfuscatedMergingRedirectionAst -Ast $AbstractSyntaxTree -AstTypesToObfuscate $AstTypesToObfuscate }
             }
             "NamedAttributeArgumentAst" {
                 If ($DisableNestedObfuscation) { Out-ObfuscatedNamedAttributeArgumentAst -Ast $AbstractSyntaxTree -AstTypesToObfuscate $AstTypesToObfuscate -DisableNestedObfuscation }
