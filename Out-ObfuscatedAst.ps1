@@ -5654,6 +5654,16 @@ function Get-AstChildren {
                 If ($Collection -ne $null) {
                     $Collection
                 }
+                Else {
+                    If($PropertyValue.Item1) {
+                        $PropertyValue | ForEach-Object -Process {
+                            $Collection = For($i = 1; $i -le $_.Length ; $i++){ IEX("$" + "PropertyValue.Item" + $i.ToString()) }
+                            If ($Collection -ne $null) {
+                                $Collection
+                            }
+                        }
+                    }
+                }
             }
         }
     }
