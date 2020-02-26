@@ -29,34 +29,34 @@
 
 @{
 
-# Version number of this module.
-ModuleVersion = '1.1'
+    # Version number of this module.
+    ModuleVersion         = '1.1'
 
-# ID used to uniquely identify this module
-GUID = 'd0a9150d-b6a4-4b17-a325-e3a24fed0aa9'
+    # ID used to uniquely identify this module
+    GUID                  = 'd0a9150d-b6a4-4b17-a325-e3a24fed0aa9'
 
-# Author of this module
-Author = 'Daniel Bohannon (@danielhbohannon)'
+    # Author of this module
+    Author                = 'Daniel Bohannon (@danielhbohannon)'
 
-# Copyright statement for this module
-Copyright = 'Apache License, Version 2.0'
+    # Copyright statement for this module
+    Copyright             = 'Apache License, Version 2.0'
 
-# Description of the functionality provided by this module
-Description = 'PowerShell module file for importing all required modules for the Invoke-Obfuscation framework.'
+    # Description of the functionality provided by this module
+    Description           = 'PowerShell module file for importing all required modules for the Invoke-Obfuscation framework.'
 
-# Minimum version of the Windows PowerShell engine required by this module
-PowerShellVersion = '2.0'
+    # Minimum version of the Windows PowerShell engine required by this module
+    PowerShellVersion     = '2.0'
 
-# Minimum version of the Windows PowerShell host required by this module
-PowerShellHostVersion = '2.0'
+    # Minimum version of the Windows PowerShell host required by this module
+    PowerShellHostVersion = '2.0'
 
-# Script files (.ps1) that are run in the caller's environment prior to importing this module
-ScriptsToProcess = @('Out-ObfuscatedTokenCommand.ps1','Out-ObfuscatedAst.ps1','Out-ObfuscatedStringCommand.ps1','Out-EncodedAsciiCommand.ps1','Out-EncodedHexCommand.ps1','Out-EncodedOctalCommand.ps1','Out-EncodedBinaryCommand.ps1','Out-SecureStringCommand.ps1','Out-EncodedBXORCommand.ps1','Out-EncodedSpecialCharOnlyCommand.ps1','Out-EncodedWhitespaceCommand.ps1','Out-CompressedCommand.ps1','Out-PowerShellLauncher.ps1','Invoke-Obfuscation.ps1')
+    # Script files (.ps1) that are run in the caller's environment prior to importing this module
+    ScriptsToProcess      = @('Out-ObfuscatedTokenCommand.ps1', 'Out-ObfuscatedAst.ps1', 'Out-ObfuscatedStringCommand.ps1', 'Out-EncodedAsciiCommand.ps1', 'Out-EncodedHexCommand.ps1', 'Out-EncodedOctalCommand.ps1', 'Out-EncodedBinaryCommand.ps1', 'Out-SecureStringCommand.ps1', 'Out-EncodedBXORCommand.ps1', 'Out-EncodedSpecialCharOnlyCommand.ps1', 'Out-EncodedWhitespaceCommand.ps1', 'Out-CompressedCommand.ps1', 'Out-PowerShellLauncher.ps1', 'Invoke-Obfuscation.ps1')
 
-# Functions to export from this module
-FunctionsToExport = '*'
+    # Functions to export from this module
+    FunctionsToExport     = '*'
 
-# HelpInfo URI of this module
-# HelpInfoURI = ''
+    # HelpInfo URI of this module
+    # HelpInfoURI = ''
 
 }
