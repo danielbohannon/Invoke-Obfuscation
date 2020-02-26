@@ -1,5 +1,4 @@
-﻿function Out-ObfuscatedAst
-{
+﻿function Out-ObfuscatedAst {
     <#
 
     .SYNOPSIS
@@ -82,12 +81,12 @@
         [ScriptBlock] $ScriptBlock,
 
         [Parameter(ParameterSetName = "ByPath", Position = 0, ValueFromPipelineByPropertyName, Mandatory)]
-        [ValidateScript({Test-Path $_ -PathType leaf})]
+        [ValidateScript( { Test-Path $_ -PathType leaf })]
         [Alias('PSPath')]
         [String] $ScriptPath,
 
         [Parameter(ParameterSetName = "ByUri", Position = 0, ValueFromPipeline, ValueFromPipelineByPropertyName, Mandatory)]
-        [ValidateScript({$_.Scheme -match 'http|https'})]
+        [ValidateScript( { $_.Scheme -match 'http|https' })]
         [Uri] $ScriptUri,
 
         [Parameter(ParameterSetName = "ByTree", Position = 0, ValueFromPipeline, ValueFromPipelineByPropertyName, Mandatory)]
@@ -1088,14 +1087,15 @@ function Out-ObfuscatedScriptBlockAst {
             }
             ElseIf ($FunctionDefinitionBlocks.Count -gt 1) {
                 $Children = $Children | Sort-Object { $_.Extent.StartOffset }
-                $Reordered  = Out-ObfuscatedAstsReordered -ParentAst $AbstractSyntaxTree -ChildrenAsts ($FunctionDefinitionBlocks | Sort-Object { $_.Extent.StartOffset }) -AstTypesToObfuscate $AstTypesToObfuscate
+                $Reordered = Out-ObfuscatedAstsReordered -ParentAst $AbstractSyntaxTree -ChildrenAsts ($FunctionDefinitionBlocks | Sort-Object { $_.Extent.StartOffset }) -AstTypesToObfuscate $AstTypesToObfuscate
 
                 If ($AbstractSyntaxTree.ParamBlock) {
                     $ObfuscatedParamBlock = Out-ObfuscatedAst -AbstractSyntaxTree $AbstractSyntaxTree.ParamBlock -AstTypesToObfuscate $AstTypesToObfuscate
                     $FinalObfuscated = [String] $AbstractSyntaxTree.Extent.Text.Substring(0, $AbstractSyntaxTree.ParamBlock.Extent.StartOffset - $AbstractSyntaxTree.Extent.StartOffset)
                     $FinalObfuscated += [String] $ObfuscatedParamBlock
                     $FinalObfuscated += [String] $Reordered.Substring($AbstractSyntaxTree.ParamBlock.Extent.StartOffset - $AbstractSyntaxTree.Extent.StartOffset + $AbstractSyntaxTree.ParamBlock.Extent.Text.Length)
-                } Else { $FinalObfuscated = $Reordered }
+                }
+                Else { $FinalObfuscated = $Reordered }
 
                 $FinalObfuscated
             }
@@ -1304,7 +1304,8 @@ function Out-ObfuscatedAttributeAst {
                 $NamedArguments = $AbstractSyntaxTree.NamedArguments
                 If ($DisableNestedObfuscation) {
                     $ObfuscatedString = Out-ObfuscatedAstsReordered -ParentAst $AbstractSyntaxTree -ChildrenAsts $NamedArguments -AstTypesToObfuscate $AstTypesToObfuscate -DisableNestedObfuscation
-                } Else {
+                }
+                Else {
                     $ObfuscatedString = Out-ObfuscatedAstsReordered -ParentAst $AbstractSyntaxTree -ChildrenAsts $NamedArguments -AstTypesToObfuscate $AstTypesToObfuscate
                 }
             }
@@ -1313,7 +1314,8 @@ function Out-ObfuscatedAttributeAst {
                     $PositionalArguments = $AbstractSyntaxTree.PositionalArguments
                     If ($DisableNestedObfuscation) {
                         $ObfuscatedString = Out-ObfuscatedAstsReordered -ParentAst $AbstractSyntaxTree -ChildrenAsts $PositionalArguments -AstTypesToObfuscate $AstTypesToObfuscate -DisableNestedObfuscation
-                    } Else {
+                    }
+                    Else {
                         $ObfuscatedString = Out-ObfuscatedAstsReordered -ParentAst $AbstractSyntaxTree -ChildrenAsts $PositionalArguments -AstTypesToObfuscate $AstTypesToObfuscate
                     }
                 }
@@ -1412,7 +1414,7 @@ function Out-ObfuscatedTypeConstraintAst {
                 @("[ADSISearcher]", "[System.DirectoryServices.DirectorySearcher]"),
                 @("[PSPrimitiveDictionary]", "[System.Management.Automation.PSPrimitiveDictionary]")
             )
-            $TypesCannotPrependSystem = $TypeAccelerators | %  { $_[0] }
+            $TypesCannotPrependSystem = $TypeAccelerators | % { $_[0] }
 
             $ObfuscatedExtent = $AbstractSyntaxTree.Extent.Text
             $FoundEquivalent = $False
@@ -1424,7 +1426,7 @@ function Out-ObfuscatedTypeConstraintAst {
                         break
                     }
                 }
-                If ($FoundEquivalent)  { break }
+                If ($FoundEquivalent) { break }
             }
 
             If ($ObfuscatedExtent.ToLower().StartsWith("[system.")) {
@@ -1889,9 +1891,9 @@ function Out-ObfuscatedBinaryExpressionAst {
             $ObfuscatedString = $AbstractSyntaxTree.Extent.Text
 
             # Numeric operation obfuscation
-            If((Test-ExpressionAstIsNumeric -Ast $AbstractSyntaxTree.Left) -AND (Test-ExpressionAstIsNumeric -Ast $AbstractSyntaxTree.Right)) {
+            If ((Test-ExpressionAstIsNumeric -Ast $AbstractSyntaxTree.Left) -AND (Test-ExpressionAstIsNumeric -Ast $AbstractSyntaxTree.Right)) {
                 $Whitespace = ""
-                If ((Get-Random @(0,1)) -eq 0) { $Whitespace = " " }
+                If ((Get-Random @(0, 1)) -eq 0) { $Whitespace = " " }
                 # Operators that can be reordered
                 $LeftString = $AbstractSyntaxTree.Left.Extent.Text
                 $RightString = $AbstractSyntaxTree.Right.Extent.Text
@@ -2166,7 +2168,7 @@ function Out-ObfuscatedHashtableAst {
         }
         Else {
             $ObfuscatedKeyValuePairs = @()
-            $ChildrenAsts = $AbstractSyntaxTree.KeyValuePairs | %  { $_.Item1; $_.Item2 }
+            $ChildrenAsts = $AbstractSyntaxTree.KeyValuePairs | % { $_.Item1; $_.Item2 }
             If ($DisableNestedObfuscation) {
                 $ObfuscatedKeyValuePairs = $AbstractSyntaxTree.KeyValuePairs
             }
@@ -2596,7 +2598,7 @@ function Out-ObfuscatedTypeExpressionAst {
                 @("[ADSISearcher]", "[System.DirectoryServices.DirectorySearcher]"),
                 @("[PSPrimitiveDictionary]", "[System.Management.Automation.PSPrimitiveDictionary]")
             )
-            $TypesCannotPrependSystem = $TypeAccelerators | %  { $_[0] }
+            $TypesCannotPrependSystem = $TypeAccelerators | % { $_[0] }
 
             $ObfuscatedExtent = $AbstractSyntaxTree.Extent.Text
             $FoundEquivalent = $False
@@ -2608,7 +2610,7 @@ function Out-ObfuscatedTypeExpressionAst {
                         break
                     }
                 }
-                If ($FoundEquivalent)  { break }
+                If ($FoundEquivalent) { break }
             }
 
             If ($ObfuscatedExtent.ToLower().StartsWith("[system.")) {
@@ -4533,7 +4535,7 @@ function Out-ObfuscatedCommandAst {
         }
         ElseIf (-not $DisableNestedObfuscation) {
             $Children = Get-AstChildren -AbstractSyntaxTree $AbstractSyntaxTree
-            If($Children.Count -ge 5) {
+            If ($Children.Count -ge 5) {
                 $ReorderableIndices = @()
                 $ObfuscatedReorderableExtents = @()
                 $LastChild = $Children[1]
@@ -4557,7 +4559,7 @@ function Out-ObfuscatedCommandAst {
                         $ReorderableIndices += [Tuple]::Create($FirstIndex, $SecondIndex)
                         $ObfuscatedReorderableExtents += [String] $ObfuscatedLastChild
                     }
-                    ElseIf ($CurrentChild.GetType().Name -eq 'CommandParameterAst' -AND $i -eq ($Children.Count -1)) {
+                    ElseIf ($CurrentChild.GetType().Name -eq 'CommandParameterAst' -AND $i -eq ($Children.Count - 1)) {
                         $ObfuscatedCurrentChild = Out-ObfuscatedAst -AbstractSyntaxTree $CurrentChild -AstTypesToObfuscate $AstTypesToObfuscate
                         $FirstIndex = $CurrentChild.Extent.StartOffset - $AbstractSyntaxTree.Extent.StartOffset
                         $SecondIndex = $CurrentChild.Extent.StartOffset + $CurrentChild.Extent.Text.Length - $AbstractSyntaxTree.Extent.StartOffset
@@ -4576,7 +4578,8 @@ function Out-ObfuscatedCommandAst {
                         $ObfuscatedExtent += [String] $AbstractSyntaxTree.Extent.Text.Substring($ReorderableIndices[$i].Item2)
                     }
                     $ObfuscatedExtent
-                } Else { Out-ObfuscatedChildrenAst -AbstractSyntaxTree $AbstractSyntaxTree -AstTypesToObfuscate $AstTypesToObfuscate }
+                }
+                Else { Out-ObfuscatedChildrenAst -AbstractSyntaxTree $AbstractSyntaxTree -AstTypesToObfuscate $AstTypesToObfuscate }
             }
             Else { Out-ObfuscatedChildrenAst -AbstractSyntaxTree $AbstractSyntaxTree -AstTypesToObfuscate $AstTypesToObfuscate }
         }
@@ -5218,7 +5221,7 @@ function Out-ObfuscatedAssignmentStatementAst {
                 Else { $AbstractSyntaxTree.Extent.Text }
             }
             ElseIf ($AbstractSyntaxTree.Left.GetType().Name -eq "ConvertExpressionAst" -AND $AbstractSyntaxTree.Left.Child.GetType().Name -eq "VariableExpressionAst" -AND
-                    $AbstractSyntaxTree.Left.VariablePath.IsVariable -AND $AbstractSyntaxTree.Left.Attribute.GetType().Name -eq 'TypeConstraintName') {
+                $AbstractSyntaxTree.Left.VariablePath.IsVariable -AND $AbstractSyntaxTree.Left.Attribute.GetType().Name -eq 'TypeConstraintName') {
                 If ($OperatorText -eq "=") {
                     "Set-Variable -Name " + $AbstractSyntaxTree.Left.Child.VariablePath.UserPath + " -Value " + (Out-ParenthesizedString ($AbstractSyntaxTree.Left.Attribute.Extent.Text + " " + $AbstractSyntaxTree.Right.Extent.Text))
                 }
@@ -5517,7 +5520,7 @@ function Out-ParenthesizedString {
         If ($TrimmedString.StartsWith("(") -and $TrimmedString.EndsWith(")")) {
             $StackDepth = 1
             $SurroundingMatch = $True
-            For([Int]$i = 1; $i -lt $TrimmedString.Length - 1; $i++) {
+            For ([Int]$i = 1; $i -lt $TrimmedString.Length - 1; $i++) {
                 $Char = $TrimmedString[$i]
                 If ($Char -eq ")") {
                     If ($StackDepth -eq 1) { $SurroundingMatch = $False; break; }
@@ -5527,7 +5530,8 @@ function Out-ParenthesizedString {
             }
             If ($SurroundingMatch) { $ScriptString }
             Else { "(" + $ScriptString + ")" }
-        } Else {
+        }
+        Else {
             "(" + $ScriptString + ")"
         }
     }
@@ -5592,7 +5596,8 @@ function Test-ExpressionAstIsNumeric {
             $PipelineElements = ($AbstractSyntaxTree.Pipeline.PipelineElements) -as [array]
             If ($PipelineElements.Count -eq 1) {
                 (Test-ExpressionAstIsNumeric -Ast $PipelineElements[0].Expression)
-            } Else { $False }
+            }
+            Else { $False }
         }
         Else {
             $False
@@ -5824,12 +5829,12 @@ function Get-Ast {
         [ScriptBlock] $ScriptBlock,
 
         [Parameter(ParameterSetName = "ByPath", Position = 0, ValueFromPipelineByPropertyName, Mandatory)]
-        [ValidateScript({Test-Path $_ -PathType leaf})]
+        [ValidateScript( { Test-Path $_ -PathType leaf })]
         [Alias('PSPath')]
         [String] $ScriptPath,
 
         [Parameter(ParameterSetName = "ByUri", Position = 0, ValueFromPipeline, ValueFromPipelineByPropertyName, Mandatory)]
-        [ValidateScript({$_.Scheme -match 'http|https'})]
+        [ValidateScript( { $_.Scheme -match 'http|https' })]
         [Uri] $ScriptUri
     )
     Process {
